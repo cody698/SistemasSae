@@ -106,7 +106,7 @@ class ModeloSeguimiento
 
   static public function mdlCantidadEstados()
   {
-    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='Sin Empezar'");
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='SIN EMPEZAR'");
     $stmt->execute();
 
     return $stmt->fetch();
@@ -117,7 +117,7 @@ class ModeloSeguimiento
 
   static public function mdlCantidadProcesos()
   {
-    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='Proceso'");
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='EN PROCESO'");
     $stmt->execute();
 
     return $stmt->fetch();
@@ -128,7 +128,7 @@ class ModeloSeguimiento
 
   static public function mdlCantidadPendienteMaterial()
   {
-    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='Pendiente Material'");
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='PENDIENTE MATERIAL'");
     $stmt->execute();
 
     return $stmt->fetch();
@@ -139,7 +139,7 @@ class ModeloSeguimiento
 
   static public function mdlCantidadLimpiezas()
   {
-    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='Limpieza'");
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA'");
     $stmt->execute();
 
     return $stmt->fetch();
@@ -150,7 +150,7 @@ class ModeloSeguimiento
 
   static public function mdlCantidadObservaciones()
   {
-    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='Observaciones'");
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION'");
     $stmt->execute();
 
     return $stmt->fetch();
@@ -159,9 +159,42 @@ class ModeloSeguimiento
     $stmt->null;
   }
 
-  static public function mdlCantidadFinalizaciones()
+  static public function mdlCantidadTerminados()
   {
-    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='Finalizado'");
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='TERMINADO'");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='POR INSTALACION'");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadPorPruebasFunc()
+  {
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='PRUEBAS FUN/OP'");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadVerFinal()
+  {
+    $stmt = Conexion::conectar()->prepare("select COUNT(*) as seguimiento FROM seguimiento WHERE estados_seguimiento='VERIFICACION FINAL'");
     $stmt->execute();
 
     return $stmt->fetch();

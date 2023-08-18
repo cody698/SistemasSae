@@ -172,9 +172,27 @@ class ControladorSeguimiento
     return $respuesta;
   }
 
-  static public function ctrCantidadFinalizaciones()
+  static public function ctrCantidadTerminado()
   {
-    $respuesta = ModeloSeguimiento::mdlCantidadFinalizaciones();
+    $respuesta = ModeloSeguimiento::mdlCantidadTerminados();
+    return $respuesta;
+  }
+
+  static public function ctrCantidadPorInstalacion()
+  {
+    $respuesta = ModeloSeguimiento::mdlCantidadPorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrCantidadPorPruebasFunc()
+  {
+    $respuesta = ModeloSeguimiento::mdlCantidadPorPruebasFunc();
+    return $respuesta;
+  }
+
+  static public function ctrCantidadVerFinal()
+  {
+    $respuesta = ModeloSeguimiento::mdlCantidadVerFinal();
     return $respuesta;
   }
 

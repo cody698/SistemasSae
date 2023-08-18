@@ -183,7 +183,7 @@ function permiso($idPermiso)
                                             <div class="icheck-primary d-inline">
                                                 <input type="checkbox" id="checkboxPrimary14" <?php if (permiso(14) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,14)">
                                                 <label for="checkboxPrimary14">
-                                                    Informes Reporte
+                                                    Reporte Control Tarjetas
                                                 </label>
                                             </div>
 
@@ -192,12 +192,41 @@ function permiso($idPermiso)
                                 </div>
 
                                 <div class="row">
-
                                     <div class="col-sm-4">
+                                        <div class="form-group clearfix">
 
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary15" <?php if (permiso(15) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,15)">
+                                                <label for="checkboxPrimary15">
+                                                    Informes Reporte
+                                                </label>
+                                            </div>
+
+                                        </div>
                                     </div>
                                     <div class="col-sm-4">
+                                        <div class="form-group clearfix">
 
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary9" <?php if (permiso(9) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,9)">
+                                                <label for="checkboxPrimary9">
+                                                    Salidas/Entradas
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group clearfix">
+
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary13" <?php if (permiso(13) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,13)">
+                                                <label for="checkboxPrimary13">
+                                                    Reportes Graficos
+                                                </label>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
 

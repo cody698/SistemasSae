@@ -1,12 +1,4 @@
-<style>
-  .content-wrapper {
-    margin-left: 0 !important;
-  }
 
-  .content {
-    margin-top: 10%;
-  }
-</style>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <div class="content-header">
@@ -25,7 +17,7 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-4" style="text-align:center">
+        <div class="col-sm-3" style="text-align:center">
           <!-- Automatic element centering -->
           <?php
           //include '../ajax/asistencia.php' 
@@ -34,7 +26,7 @@
           </div>
 
           <div class="lockscreen-logo">
-            <a href="#"><b>SISTEMA</b> CONTROL TARJETAS</a>
+            <a href="#">CONTROL TARJETAS</a>
           </div>
           <!-- User name -->
           <div class="lockscreen-name">CONTROL TARJETAS SAE</div>
@@ -97,7 +89,7 @@
           <!-- /.center -->
 
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-9">
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">VITACORA TARJETAS</h3>
