@@ -146,7 +146,7 @@ if (count($respuesta)) {
             </div>
 
             <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="info-box">
                         <span class="info-box-icon bg-danger elevation-1"><i class="far fa-window-close"></i></span>
                         <div class="info-box-content">

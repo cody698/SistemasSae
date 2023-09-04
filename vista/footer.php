@@ -127,6 +127,17 @@ Seccion  de Modals
 </div>
 <!-- /.modal -->
 
+<div class="modal fade" id="modal-graficas">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content" id="contenedor-chart">
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
 <script>
     $(function() {
         $("#DataTableUsuario").DataTable({

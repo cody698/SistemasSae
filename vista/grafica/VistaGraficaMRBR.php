@@ -20,20 +20,16 @@ if (count($respuesta)) {
     </div>
   </div>
   <div class="card-body">
+    <canvas id="contenedor-chart" height="200"></canvas>
     <div class="d-flex">
       <p class="d-flex flex-column">
 
       </p>
     </div>
     <!-- /.d-flex -->
-    <div class="position-relative mb-4">
-      <canvas id="sales-chart" height="200"></canvas>
-    </div>
   </div>
 </div>
 </div>
 <div class="modal-footer">
   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
 </div>
-
-<script src="../../assest/js/graficas/graficas.php"></script>

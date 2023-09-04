@@ -89,4 +89,93 @@ $(function () {
   
 })
 
+function Abrir() {
+  $("#modal-graficas").modal("show");
+  var obj = "";
+  $.ajax({
+    type: "POST",
+    url: "vista/grafica/VistaGraficaMRBR.php",
+    data: obj,
+    success: function (data) {
+      $("#contenedor-chart").html(data);
+    }
+  }
+
+  )
+}
+
+$(function () {
+  'use strict'
+
+  var ticksStyle = {
+    fontColor: '#495057',
+    fontStyle: 'bold'
+  }
+
+  var mode = 'index'
+  var intersect = true
+
+  var $modal = $('#contenedor-chart')
+  // eslint-disable-next-line no-unused-vars
+  var modal = new Chart($modal, {
+    type: 'bar',
+    data: {
+      labels: [<?php echo $etiqueta1;?>],
+      datasets: [
+        {
+          backgroundColor: '#007bff',
+          borderColor: '#007bff',
+          data: [<?php echo $valor1;?>]
+        }
+      ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      tooltips: {
+        mode: mode,
+        intersect: intersect
+      },
+      hover: {
+        mode: mode,
+        intersect: intersect
+      },
+      legend: {
+        display: false
+      },
+      scales: {
+        yAxes: [{
+          // display: false,
+          gridLines: {
+            display: true,
+            lineWidth: '4px',
+            color: 'rgba(0, 0, 0, .2)',
+            zeroLineColor: 'transparent'
+          },
+          ticks: $.extend({
+            beginAtZero: true,
+
+            // Include a dollar sign in the ticks
+            callback: function (value) {
+              if (value >= 1000) {
+                value /= 1000
+                value += 'k'
+              }
+
+              return  value
+            }
+          }, ticksStyle)
+        }],
+        xAxes: [{
+          display: true,
+          gridLines: {
+            display: false
+          },
+          ticks: ticksStyle
+        }]
+      }
+    }
+  })
+  
+})
+
 // lgtm [js/unused-local-variable]

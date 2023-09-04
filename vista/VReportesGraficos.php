@@ -1,21 +1,50 @@
 <?php
 
-$respuesta = ModeloGrafica::mdlMRBR();
-$totalAD = '';
-if (count($respuesta)) {
-    $totalAD = $respuesta[0]['total'];
-}
-$respuestacpcp = ModeloGrafica::mdlCPCP();
-$totalCPCP = '';
-if (count($respuesta)) {
-    $totalCPCP = $respuestacpcp[0]['total'];
-}
+$cpcpala = ControladorInformeAvance::ctrCpcpAla();
+$cpcpbuzones = ControladorInformeAvance::ctrCpcpBuzones();
+$cpcpcabina = ControladorInformeAvance::ctrCpcpCabina();
+$cpcpempenaje = ControladorInformeAvance::ctrCpcpEmpenaje();
+$cpcpfuselaje = ControladorInformeAvance::ctrCpcpFuselaje();
+$cpcphidraulica = ControladorInformeAvance::ctrCpcpHidraulica();
+$cpcpmotores = ControladorInformeAvance::ctrCpcpMotores();
+$cpcptotalterminados = ControladorInformeAvance::ctrCpcpTotalesTerminados();
 
-$respuestatnrs = ModeloGrafica::mdlTNRs();
-$totalTNRs = '';
-if (count($respuesta)) {
-    $totalTNRs = $respuestatnrs[0]['total'];
-}
+$cpcpalaenproceso = ControladorInformeAvance::ctrCpcpAlaEnProceso();
+$cpcpbuzonesenproceso = ControladorInformeAvance::ctrCpcpBuzonesEnProceso();
+$cpcpcabinaenproceso = ControladorInformeAvance::ctrCpcpCabinaEnProceso();
+$cpcpempenajeenproceso = ControladorInformeAvance::ctrCpcpEmpenajeEnProceso();
+$cpcpfuselajeenproceso = ControladorInformeAvance::ctrCpcpFuselajeEnProceso();
+$cpcphidraulicaenproceso = ControladorInformeAvance::ctrCpcpHidraulicaEnProceso();
+$cpcpmotoresenproceso = ControladorInformeAvance::ctrCpcpMotoresEnProceso();
+$cpcptotalterminadosenproceso = ControladorInformeAvance::ctrCpcpTotalesTerminadosEnProceso();
+
+$cpcpalaparacierredearea = ControladorInformeAvance::ctrCpcpAlaParaCierreDeArea();
+$cpcpbuzonesparacierredearea = ControladorInformeAvance::ctrCpcpBuzonesParaCierreDeArea();
+$cpcpcabinaparacierredearea = ControladorInformeAvance::ctrCpcpCabinaParaCierreDeArea();
+$cpcpempenajeparacierredearea = ControladorInformeAvance::ctrCpcpEmpenajeParaCierreDeArea();
+$cpcpfuselajeparacierredearea = ControladorInformeAvance::ctrCpcpFuselajeParaCierreDeArea();
+$cpcphidraulicaparacierredearea = ControladorInformeAvance::ctrCpcpHidraulicaParaCierreDeArea();
+$cpcpmotoresparacierredearea = ControladorInformeAvance::ctrCpcpMotoresParaCierreDeArea();
+$cpcptotalterminadosparacierredearea = ControladorInformeAvance::ctrCpcpTotalesTerminadosParaCierreDeArea();
+
+$cpcpalapruebasfuc = ControladorInformeAvance::ctrCpcpAlaPruebasFuc();
+$cpcpbuzonespruebasfuc = ControladorInformeAvance::ctrCpcpBuzonesPruebasFuc();
+$cpcpcabinapruebasfuc = ControladorInformeAvance::ctrCpcpCabinaPruebasFuc();
+$cpcpempenajepruebasfuc = ControladorInformeAvance::ctrCpcpEmpenajePruebasFuc();
+$cpcpfuselajepruebasfuc = ControladorInformeAvance::ctrCpcpFuselajePruebasFuc();
+$cpcphidraulicapruebasfuc = ControladorInformeAvance::ctrCpcpHidraulicaPruebasFuc();
+$cpcpmotorespruebasfuc = ControladorInformeAvance::ctrCpcpMotoresPruebasFuc();
+$cpcptotalterminadospruebasfuc = ControladorInformeAvance::ctrCpcpTotalesTerminadosPruebasFuc();
+
+$cpcpalaparainspeccion = ControladorInformeAvance::ctrCpcpAlaParaInspeccion();
+$cpcpbuzonesparainspeccion = ControladorInformeAvance::ctrCpcpBuzonesParaInspeccion();
+$cpcpcabinaparainspeccion = ControladorInformeAvance::ctrCpcpCabinaParaInspeccion();
+$cpcpempenajeparainspeccion = ControladorInformeAvance::ctrCpcpEmpenajeParaInspeccion();
+$cpcpfuselajeparainspeccion = ControladorInformeAvance::ctrCpcpFuselajeParaInspeccion();
+$cpcphidraulicaparainspeccion = ControladorInformeAvance::ctrCpcpHidraulicaParaInspeccion();
+$cpcpmotoresparainspeccion = ControladorInformeAvance::ctrCpcpMotoresParaInspeccion();
+$cpcptotalterminadosparainspeccion = ControladorInformeAvance::ctrCpcpTotalesTerminadosParaInspeccion();
+
 ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -64,11 +93,11 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> ALA
                                         </a>
                                     </td>
-                                    <td class="text-right">9</td>
-                                    <td class="text-right">4</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
+                                    <td class="text-right"><?php echo $cpcpala["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpalaenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpalaparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpalapruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpalaparainspeccion["totalterminadoscpcp"]; ?></td>
                                     <td class="text-right">14</td>
 
                                 </tr>
@@ -78,11 +107,11 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> HIDRAULICA
                                         </a>
                                     </td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">0</td>
+                                    <td class="text-right"><?php echo $cpcphidraulica["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcphidraulicaenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcphidraulicaparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcphidraulicapruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcphidraulicaparainspeccion["totalterminadoscpcp"]; ?></td>
                                     <td class="text-right">3</td>
                                 </tr>
                                 <tr>
@@ -91,11 +120,11 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> CABINA
                                         </a>
                                     </td>
-                                    <td class="text-right">7</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">9</td>
+                                    <td class="text-right"><?php echo $cpcpcabina["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpcabinaenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpcabinaparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpcabinapruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpcabinaparainspeccion["totalterminadoscpcp"]; ?></td>
                                     <td class="text-right">16</td>
                                 </tr>
                                 <tr>
@@ -104,11 +133,11 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> FUSELAGE
                                         </a>
                                     </td>
-                                    <td class="text-right">10</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
+                                    <td class="text-right"><?php echo $cpcpfuselaje["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpfuselajeenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpfuselajeparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpfuselajepruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpfuselajeparainspeccion["totalterminadoscpcp"]; ?></td>
                                     <td class="text-right">10</td>
                                 </tr>
                                 <tr>
@@ -117,11 +146,11 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> BUZONES
                                         </a>
                                     </td>
-                                    <td class="text-right">2</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">5</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
+                                    <td class="text-right"><?php echo $cpcpbuzones["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpbuzonesenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpbuzonesparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpbuzonespruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpbuzonesparainspeccion["totalterminadoscpcp"]; ?></td>
                                     <td class="text-right">8</td>
                                 </tr>
                                 <tr>
@@ -130,11 +159,11 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> MOTORES
                                         </a>
                                     </td>
-                                    <td class="text-right">3</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
+                                    <td class="text-right"><?php echo $cpcpmotores["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpmotoresenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpmotoresparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpmotorespruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpmotoresparainspeccion["totalterminadoscpcp"]; ?></td>
                                     <td class="text-right">3</td>
                                 </tr>
                                 <tr>
@@ -143,12 +172,12 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> EMPENAGE
                                         </a>
                                     </td>
-                                    <td class="text-right">3</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">4</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">7</td>
+                                    <td class="text-right"><?php echo $cpcpempenaje["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpempenajeenproceso["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpempenajeparacierredearea["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpempenajepruebasfuc["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpempenajeparainspeccion["totalterminadoscpcp"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcpempenaje["totalterminadoscpcp"]; ?></td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -156,12 +185,12 @@ if (count($respuesta)) {
                                             <span class="glyphicon glyphicon-signal"></span> Total General
                                         </a>
                                     </td>
-                                    <td class="text-right">35</td>
-                                    <td class="text-right">6</td>
-                                    <td class="text-right">10</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">9</td>
-                                    <td class="text-right">61</td>
+                                    <td class="text-right"><?php echo $cpcptotalterminados["totalterminados"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcptotalterminadosenproceso["totalterminados"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcptotalterminadosparacierredearea["totalterminados"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcptotalterminadospruebasfuc["totalterminados"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcptotalterminadosparainspeccion["totalterminados"]; ?></td>
+                                    <td class="text-right"><?php echo $cpcptotalterminadosenproceso["totalterminados"]; ?></td>
                                 </tr>
                             </tbody>
                         </table>
