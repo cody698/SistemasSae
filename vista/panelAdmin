@@ -27,9 +27,6 @@ if (count($respuesta)) {
 }
 
 ?>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -181,19 +178,11 @@ if (count($respuesta)) {
                             <!-- /.d-flex -->
 
                             <div class="position-relative mb-4">
-                                <canvas id="report_tarjetas_mrbr1" height="200px"></canvas>
+                                <canvas id="sales-chart" height="200"></canvas>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#report_tarjetas_mrbr">
-                                Barras
-                            </button>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#report_tarjetas_barra">
-                                Pie
-                            </button>
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#report_tarjetas_torta">
-                                Doughnut
-                            </button>
+                            <button type="button" class="btn btn-primary" onclick="AbrirGraficaMRBR()">Extender Grafica</button>
                         </div>
                     </div>
                 </div>
@@ -214,19 +203,11 @@ if (count($respuesta)) {
                             <!-- /.d-flex -->
 
                             <div class="position-relative mb-4">
-                                <canvas id="reporte_tarjetas_cpcp1" height="200"></canvas>
+                                <canvas id="sales-chartcpcp" height="200"></canvas>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reporte_tarjetas_cpcp2">
-                                Barras
-                            </button>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#reporte_tarjetas_cpcp3">
-                                Pie
-                            </button>
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#reporte_tarjetas_cpcp4">
-                                Doughnut
-                            </button>
+                            <button type="button" class="btn btn-primary" onclick="AbrirGraficaCPCP()">Extender Grafica</button>
                         </div>
                     </div>
                 </div>
@@ -247,19 +228,11 @@ if (count($respuesta)) {
                             <!-- /.d-flex -->
 
                             <div class="position-relative mb-4">
-                                <canvas id="reporte_tarjetas_tnrs1" height="200"></canvas>
+                                <canvas id="sales-charttnrs" height="200"></canvas>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reportes_tarjetas_tnrs2">
-                                Barras
-                            </button>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#reportes_tarjetas_tnrs3">
-                                Pie
-                            </button>
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#reportes_tarjetas_tnrs4">
-                                Doughnut
-                            </button>
+                            <button type="button" class="btn btn-primary" onclick="AbrirGraficaTNRs()">Extender Grafica</button>
                         </div>
                     </div>
                 </div>
@@ -268,6 +241,7 @@ if (count($respuesta)) {
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+
 </div>
 <!-- /.content-wrapper -->
 
@@ -279,163 +253,3 @@ if (count($respuesta)) {
     </div>
 </aside>
 <!-- /.control-sidebar -->
-
-
-<!-- Modal 1 -->
-<div class="modal fade" id="report_tarjetas_mrbr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas MRBR <?php echo $totalAD; ?>
-                <canvas id="report_tarjetas_mrbr2" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="report_tarjetas_barra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas MRBR <?php echo $totalAD; ?>
-                <canvas id="report_tarjetas_mrbr4" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="report_tarjetas_torta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas MRBR <?php echo $totalAD; ?>
-                <canvas id="report_tarjetas_mrbr3" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal end 1 -->
-
-<!-- Modal 2 -->
-<div class="modal fade" id="reporte_tarjetas_cpcp2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas CPCP <?php echo $totalCPCP; ?>
-                <canvas id="report_tarjetas_cpcp2" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="reporte_tarjetas_cpcp3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas CPCP <?php echo $totalCPCP; ?>
-                <canvas id="report_tarjetas_cpcp3" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="reporte_tarjetas_cpcp4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas CPCP <?php echo $totalCPCP; ?>
-                <canvas id="report_tarjetas_cpcp4" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal end 2 -->
-
-<!-- Modal 3 -->
-<div class="modal fade" id="reportes_tarjetas_tnrs2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas TNRs 110
-                <canvas id="reportes_tarjetas_tnr2" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="reportes_tarjetas_tnrs3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas TNRs 110
-                <canvas id="reportes_tarjetas_tnr3" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="reportes_tarjetas_tnrs4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color: red;color: white">
-                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Reportes Tarjetas TNRs 110
-                <canvas id="reportes_tarjetas_tnr4" height="150px"></canvas>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Modal end 3 -->

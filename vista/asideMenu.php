@@ -36,6 +36,7 @@ function habilitado($idPermiso)
                                     <li><a href="VCalibracion" class="dropdown-item">Herramientas Origen o Calibracion</a></li>
                                     <li><a href="VDBaja" class="dropdown-item">Herramientas Dados De Baja</a></li>
                                     <li><a href="VRepHerramientas" class="dropdown-item">Herramientas Reporte</a></li>
+                                    <li><a href="VInforme" class="dropdown-item">Informe Reporte</a></li>
                                 </ul>
                             </li>
                         <?php } ?>
@@ -58,9 +59,9 @@ function habilitado($idPermiso)
                          <?php if (habilitado(14) != null) {
                         ?>
                             <li class="nav-item dropdown dropdown-hover">
-                                <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Informe</a>
+                                <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Ordenes De Trabajo</a>
                                 <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
-                                    <li><a href="VInforme" class="dropdown-item">Informe Reporte</a></li>
+                                    <li><a href="VOrdenTrabajo" class="dropdown-item">Orden De Trabajo</a></li>
                                 </ul>
                             </li>
                         <?php } ?>

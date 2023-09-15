@@ -1,4 +1,20 @@
 <?php
+$respuesta = ModeloGrafica::mdlMRBR();
+$totalAD = '';
+if (count($respuesta)) {
+    $totalAD = $respuesta[0]['total'];
+}
+$respuestacpcp = ModeloGrafica::mdlCPCP();
+$totalCPCP = '';
+if (count($respuesta)) {
+    $totalCPCP = $respuestacpcp[0]['total'];
+}
+
+$respuestatnrs = ModeloGrafica::mdlTNRs();
+$totalTNRs = '';
+if (count($respuesta)) {
+    $totalTNRs = $respuestatnrs[0]['total'];
+}
 
 $cpcpala = ControladorInformeAvance::ctrCpcpAla();
 $cpcpbuzones = ControladorInformeAvance::ctrCpcpBuzones();
@@ -44,6 +60,27 @@ $cpcpfuselajeparainspeccion = ControladorInformeAvance::ctrCpcpFuselajeParaInspe
 $cpcphidraulicaparainspeccion = ControladorInformeAvance::ctrCpcpHidraulicaParaInspeccion();
 $cpcpmotoresparainspeccion = ControladorInformeAvance::ctrCpcpMotoresParaInspeccion();
 $cpcptotalterminadosparainspeccion = ControladorInformeAvance::ctrCpcpTotalesTerminadosParaInspeccion();
+if ($cpcpalapruebasfuc == false) {
+    $cpcpempenajeenproceso["totalterminadoscpcp"] = "0";
+    $cpcpfuselajeenproceso["totalterminadoscpcp"] = "0";
+    $cpcphidraulicaenproceso["totalterminadoscpcp"] = "0";
+    $cpcpmotoresenproceso["totalterminadoscpcp"] = "0";
+    $cpcpfuselajeparacierredearea["totalterminadoscpcp"] = "0";
+    $cpcphidraulicaparacierredearea["totalterminadoscpcp"] = "0";
+    $cpcpmotoresparacierredearea["totalterminadoscpcp"] = "0";
+    $cpcpbuzonespruebasfuc["totalterminadoscpcp"] = "0";
+    $cpcpcabinapruebasfuc["totalterminadoscpcp"] = "0";
+    $cpcpfuselajepruebasfuc["totalterminadoscpcp"] = "0";
+    $cpcpmotorespruebasfuc["totalterminadoscpcp"] = "0";
+    $cpcpempenajepruebasfuc["totalterminadoscpcp"] = "0";
+    $cpcpalapruebasfuc["totalterminadoscpcp"] = "0";
+    $cpcpalaparainspeccion["totalterminadoscpcp"] = "0";
+    $cpcpbuzonesparainspeccion["totalterminadoscpcp"] = "0";
+    $cpcpempenajeparainspeccion["totalterminadoscpcp"] = "0";
+    $cpcpfuselajeparainspeccion["totalterminadoscpcp"] = "0";
+    $cpcphidraulicaparainspeccion["totalterminadoscpcp"] = "0";
+    $cpcpmotoresparainspeccion["totalterminadoscpcp"] = "0";
+}
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -64,14 +101,14 @@ $cpcptotalterminadosparainspeccion = ControladorInformeAvance::ctrCpcpTotalesTer
 
     <div class="content">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row p-3">
                 <div class="col-xs-12 col-xs-offset-1 col-md-12 col-md-offset-2">
                     <div class="table-responsive">
                         <div class="col-sm-6">
                             <h3 class="m-0">
-                                <a href="#" onclick="AbrirGraficaCPCP()">
-                                    <span class="glyphicon glyphicon-signal"></span>TARJETAS DE CONTROL DE CORROSION (CPCP)
-                                </a>
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#reporte_tarjetas_cpcp5">
+                                Doughnut
+                            </button>
                             </h3>
                         </div>
                         <table id="DataTableCPCP" class="table table-bordered table-striped">
@@ -607,3 +644,19 @@ $cpcptotalterminadosparainspeccion = ControladorInformeAvance::ctrCpcpTotalesTer
     </div>
 </aside>
 <!-- /.control-sidebar -->
+<div class="modal fade" id="reporte_tarjetas_cpcp5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: red;color: white">
+                <h4 class="modal-title" id="exampleModalLabel">Grafica Tarjetas Extendida</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Reportes Tarjetas CPCP <?php echo $totalCPCP; ?>
+                <canvas id="report_tarjetas_cpcp5" height="150px"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

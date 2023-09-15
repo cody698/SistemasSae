@@ -61,6 +61,7 @@
 <script src="assest/js/herramientas.js"></script>
 <script src="assest/js/logherramientas.js"></script>
 <script src="assest/js/servicios.js"></script>
+<script src="assest/js/ordenesdetrabajo.js"></script>
 <script src="assest/js/graficaopen.js"></script>
 <script src="assest/js/graficas/graficas.php"></script>
 <script src="assest/js/graficas/graficascpcp.php"></script>
@@ -281,6 +282,15 @@ Seccion  de Modals
             "buttons": ["excel", "pdf", "print"]
         }).buttons().container().appendTo('#DataTableLogHerramientas_wrapper .col-md-6:eq(0)');
 
+    });
+
+    $(function() {
+        $("#DataTableOrdenDeTrabajo").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#DataTableOrdenDeTrabajo_wrapper .col-md-6:eq(0)');
     });
 
     $('.select2bs4').select2({
