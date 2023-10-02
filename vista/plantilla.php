@@ -77,6 +77,9 @@ if(isset($_SESSION["ingreso"])&&$_SESSION["ingreso"]=="ok"){
           $_GET["ruta"] == "VRepHerramientas" ||
           $_GET["ruta"] == "VReportesGraficos" ||
           $_GET["ruta"] == "VInforme" ||
+          $_GET["ruta"] == "VLogDevolucion" ||
+          $_GET["ruta"] == "VLogCalibradas" ||
+          $_GET["ruta"] == "VLogDevCalibradas" ||
           $_GET["ruta"] == "descargar" ||
           $_GET["ruta"] == "salir" ) {
             $ruta=$_GET["ruta"].".php";

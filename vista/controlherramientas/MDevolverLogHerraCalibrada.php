@@ -1,21 +1,21 @@
 <?php
 require_once "../../controlador/usuarioControlador.php";
 require_once "../../modelo/usuarioModelo.php";
-require_once "../../controlador/logherramientasControlador.php";
-require_once "../../modelo/logherramientasModelo.php";
+require_once "../../controlador/controlherramientasControlador.php";
+require_once "../../modelo/controlherramientasModelo.php";
 
 $id = $_GET["id"];
 
-$herramientas = ControladorLogHerramientas::ctrInfoLogHerramienta($id);
-$usuario = ControladorLogHerramientas::ctrInfoLogHerramientaSelec($id);
+$herramientas = ControladorHerramientas::ctrInfoLogHerraCalibrada($id);
+$usuario = ControladorHerramientas::ctrInfoUsuarioLog($id);
 
-$herra = json_decode($herramientas["codigo_herramientas"]);
+$herra = json_decode($herramientas["detalle"]);
 
 session_start();
 ?>
 
 <div class="modal-header bg-dark">
-    <h4 class="modal-title text-light">Devolución de Herramientas</h4>
+    <h4 class="modal-title text-light">Devolución de Herramientas Calibrada</h4>
     <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
@@ -35,7 +35,7 @@ session_start();
 
                         <?php foreach ($usuarios as $value) {
                         ?>
-                            <option value="<?php echo $value["id_usuario"]; ?>" <?php if ($usuario["nombre_usuario"] == $value["id_usuario"]) : ?> selected <?php endif ?>><?php echo $value["nombre_usuario"]; ?></option>
+                            <option value="<?php echo $value["id_usuario"]; ?>" <?php if ($usuario["tecnico"] == $value["id_usuario"]) : ?> selected <?php endif ?>><?php echo $value["nombre_usuario"]; ?></option>
                            
                         <?php
                         }
@@ -66,16 +66,16 @@ session_start();
                     <tbody>
                         <?php
                         foreach ($herra as $value) {
-                            $herraDesc = ControladorLogHerramientas::ctrInfoLogHerramientaDesc($value->id);
+                            $herraDesc = ControladorHerramientas::ctrInfoLogHerraDesc($value->id);
                         ?>
                             <tr>
-                                <td><?php echo $herraDesc['ubicacion_herramientas'] ?></td>
-                                <td><?php echo $herraDesc['descripcion_herramientas'] . " - " . $herraDesc["codigo_herramientas"] ?></td>
+                                <td><?php echo $herraDesc['ubicacion_controlherramientas'] ?></td>
+                                <td><?php echo $herraDesc['descripcion_controlherramientas'] . " - " . $herraDesc["codigo_controlherramientas"] ?></td>
                                 <td><input class="text-center" type="number" name="cantidad[]" id="cantHerramienta" value="<?php echo $value->cantidad ?>" max="<?php echo $value->cantidad ?>" min="0"></td>
 
                                 <input type="hidden" name="cantidadActual[]" value="<?php echo $value->cantidad ?>">
 
-                                <td><input class="text-center" type="hidden" name="ids[]" value="<?php echo $herraDesc["id_herramientas"] ?>"></td>
+                                <td><input class="text-center" type="hidden" name="ids[]" value="<?php echo $herraDesc["id_controlherramientas"] ?>"></td>
                             </tr>
                         <?php
                         }
@@ -85,7 +85,7 @@ session_start();
             </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" onclick="RegDevHerramientas()">Realizar Devolución</button>
+                <button type="button" class="btn btn-primary" onclick="RegDevHerraCalibrada()">Realizar Devolución</button>
             </div>
         </div>
     </div>

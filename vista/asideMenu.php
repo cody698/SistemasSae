@@ -37,6 +37,8 @@ function habilitado($idPermiso)
                                     <li><a href="VDBaja" class="dropdown-item">Herramientas Dados De Baja</a></li>
                                     <li><a href="VRepHerramientas" class="dropdown-item">Herramientas Reporte</a></li>
                                     <li><a href="VInforme" class="dropdown-item">Informe Reporte</a></li>
+                                    <li><a href="VLogCalibradas" class="dropdown-item">Log Herramientas Calibradas</a></li>
+                                    <li><a href="VLogDevCalibradas" class="dropdown-item">Log Devolucion Calibradas</a></li>
                                 </ul>
                             </li>
                         <?php } ?>
@@ -50,6 +52,7 @@ function habilitado($idPermiso)
                                 <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
                                     <li><a href="VHerramientas" class="dropdown-item">Herramientas SAE-LAB</a></li>
                                     <li><a href="VLogHerramientas" class="dropdown-item">Log Herramientas</a></li>
+                                    <li><a href="VLogDevolucion" class="dropdown-item">Log Devoluciones</a></li>
                                 </ul>
                             </li>
                         <?php } ?>
