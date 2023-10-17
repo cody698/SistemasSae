@@ -453,4 +453,403 @@ class ModeloInformeAvance
     $stmt->null;
   }
 
+  // TERMINADO MRBR
+  static public function mdlCantidadMrbrTerminadoAla()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='TERMINADO' AND area_seguimiento='ALA' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTerminadoBuzones()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='TERMINADO' AND area_seguimiento='BUZ' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTerminadoCabina()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='TERMINADO' AND area_seguimiento='CAB' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTerminadoFuselaje()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='TERMINADO' AND area_seguimiento='FUS' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTerminadoHidraulica()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='TERMINADO' AND area_seguimiento='HYD' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTerminadoAvionica()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='TERMINADO' AND area_seguimiento='AV' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTotalesTerminados()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminados FROM seguimiento
+    WHERE estados_seguimiento='TERMINADO' AND tipo_tarjeta='MRBR'
+    GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  // En Proceso MRBR
+  static public function mdlCantidadMrbrAlaEnProceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='EN PROCESO' AND area_seguimiento='ALA' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrBuzonesEnProceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='EN PROCESO' AND area_seguimiento='BUZ' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrCabinaEnProceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='EN PROCESO' AND area_seguimiento='CAB' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrFuselajeEnproceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='EN PROCESO' AND area_seguimiento='FUS' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrHidraulicaEnProceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='EN PROCESO' AND area_seguimiento='HYD' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrAvionicaEnProceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='EN PROCESO' AND area_seguimiento='AV' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTotalesTerminadosEnProceso()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminados FROM seguimiento
+    WHERE estados_seguimiento='EN PROCESO' AND tipo_tarjeta='MRBR'
+    GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  // Para cierre de area MRBR
+  static public function mdlCantidadMrbrAlaParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA' AND area_seguimiento='ALA' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrBuzonesParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA' AND area_seguimiento='BUZ' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrCabinaParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA' AND area_seguimiento='CAB' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrFuselajeParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA' AND area_seguimiento='FUS' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrHidraulicaParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA' AND area_seguimiento='HYD' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrAvionicaParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA CIERRE DE AREA' AND area_seguimiento='MOT' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTotalesTerminadosParaCierreDeArea()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminados FROM seguimiento
+    WHERE estados_seguimiento='PARA CIERRE DE AREA' AND tipo_tarjeta='MRBR'
+    GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  // MRBR PARA INSPECCION
+  static public function mdlCantidadMrbrAlaParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION' AND area_seguimiento='ALA' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrBuzonesParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION' AND area_seguimiento='BUZ' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrCabinaParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION' AND area_seguimiento='CAB' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrFuselajeParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION' AND area_seguimiento='FUS' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrHidraulicaParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION' AND area_seguimiento='HYD' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrAvionicaParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='PARA INSPECCION' AND area_seguimiento='AV' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTotalesTerminadosParaInspeccion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminados FROM seguimiento
+    WHERE estados_seguimiento='PARA INSPECCION' AND tipo_tarjeta='MRBR'
+    GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  // MRBR POR INSTALACION
+  static public function mdlCantidadMrbrAlaPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='POR INSTALACION' AND area_seguimiento='ALA' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrBuzonesPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='POR INSTALACION' AND area_seguimiento='BUZ' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrCabinaPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='POR INSTALACION' AND area_seguimiento='CAB' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrFuselajePorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='POR INSTALACION' AND area_seguimiento='FUS' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrHidraulicaPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='POR INSTALACION' AND area_seguimiento='HYD' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrAvionicaPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminadosmrbr FROM seguimiento WHERE estados_seguimiento='POR INSTALACION' AND area_seguimiento='AV' AND tipo_tarjeta='MRBR' GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
+
+  static public function mdlCantidadMrbrTotalesTerminadosPorInstalacion()
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT tipo_tarjeta, COUNT(estados_seguimiento) as totalterminados FROM seguimiento
+    WHERE estados_seguimiento='POR INSTALACION' AND tipo_tarjeta='MRBR'
+    GROUP BY tipo_tarjeta");
+    $stmt->execute();
+
+    return $stmt->fetch();
+
+    $stmt->close();
+    $stmt->null;
+  }
 }

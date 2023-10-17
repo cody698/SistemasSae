@@ -62,6 +62,7 @@
 <script src="assest/js/logherramientas.js"></script>
 <script src="assest/js/servicios.js"></script>
 <script src="assest/js/ordenesdetrabajo.js"></script>
+<script src="assest/js/informes.js"></script>
 <script src="assest/js/graficaopen.js"></script>
 <script src="assest/js/graficas/graficas.php"></script>
 <script src="assest/js/graficas/graficascpcp.php"></script>
@@ -293,6 +294,54 @@ Seccion  de Modals
         }).buttons().container().appendTo('#DataTableOrdenDeTrabajo_wrapper .col-md-6:eq(0)');
     });
 
+    $(function() {
+        $("#DataTableCPCP").DataTable({
+            language: {
+                "lengthMenu": "Mostrar _MENU_ registros",
+                "zeroRecords": "No se encontraron resultados",
+                "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar:",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast": "Último",
+                    "sNext": "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "sProcessing": "Procesando...",
+            },
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["excel", "pdf", "print"]
+        }).buttons().container().appendTo('#DataTableCPCP_wrapper .col-md-6:eq(0)');
+    });
+
+    $(function() {
+        $("#DataTableMRBR").DataTable({
+            language: {
+                "lengthMenu": "Mostrar _MENU_ registros",
+                "zeroRecords": "No se encontraron resultados",
+                "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar:",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast": "Último",
+                    "sNext": "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "sProcessing": "Procesando...",
+            },
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["excel", "pdf", "print"]
+        }).buttons().container().appendTo('#DataTableMRBR_wrapper .col-md-6:eq(0)');
+    });
+
     $('.select2bs4').select2({
         theme: 'bootstrap4'
     })
@@ -300,7 +349,6 @@ Seccion  de Modals
     $('.select2Usu').select2({
         theme: 'bootstrap4'
     })
-
 </script>
 
 </body>

@@ -17,7 +17,7 @@ function AbrirGraficaMRBR() {
 }
 
 $(document).ready(function () {
-  $('#DataTableMRBR').DataTable({
+  $('#DataTableMRBR1').DataTable({
     language: {
       "lengthMenu": "Mostrar _MENU_ registros",
       "zeroRecords": "No se encontraron resultados",
@@ -75,7 +75,7 @@ function AbrirGraficaCPCP() {
 }
 
 $(document).ready(function () {
-  $('#DataTableCPCP').DataTable({
+  $('#s').DataTable({
     language: {
       "lengthMenu": "Mostrar _MENU_ registros",
       "zeroRecords": "No se encontraron resultados",
@@ -92,7 +92,7 @@ $(document).ready(function () {
       "sProcessing": "Procesando...",
     },
     //para usar los botones   
-    responsive: "true",
+    responsive: true,
     dom: 'Bfrtilp',
     buttons: [
       {

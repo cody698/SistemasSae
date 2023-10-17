@@ -261,4 +261,219 @@ class ControladorInformeAvance
     $respuesta = ModeloInformeAvance::mdlCantidadCpcpTotalesTerminadosParaInspeccion();
     return $respuesta;
   }
+
+  // MRBR TERMINADO
+  static public function ctrMrbrTerminadoAla()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTerminadoAla();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTerminadoBuzones()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTerminadoBuzones();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTerminadoCabina()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTerminadoCabina();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTerminadoFuselaje()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTerminadoFuselaje();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTerminadoHidraulica()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTerminadoHidraulica();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTerminadoMotores()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTerminadoAvionica();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTotalesTerminados()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTotalesTerminados();
+    return $respuesta;
+  }
+
+  // MRBR En Proceso
+  static public function ctrMrbrAlaEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAlaEnProceso();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrBuzonesEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrBuzonesEnProceso();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrCabinaEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrCabinaEnProceso();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrFuselajeEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrFuselajeEnproceso();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrHidraulicaEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrHidraulicaEnProceso();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrAvionicaEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAvionicaEnProceso();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTotalesTerminadosEnProceso()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTotalesTerminadosEnProceso();
+    return $respuesta;
+  }
+
+  // MRBR En Cierre de Area
+  static public function ctrMrbrAlaParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAlaParaCierreDeArea();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrBuzonesParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrBuzonesParaCierreDeArea();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrCabinaParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrCabinaParaCierreDeArea();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrFuselajeParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrFuselajeParaCierreDeArea();
+    return $respuesta;
+  }
+
+  static public function ctMrbrHidraulicaParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrHidraulicaParaCierreDeArea();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrAvionicaParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAvionicaParaCierreDeArea();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTotalesTerminadosParaCierreDeArea()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTotalesTerminadosParaCierreDeArea();
+    return $respuesta;
+  }
+
+  // MRBR PARA INSPECCION
+  static public function ctrMrbrAlaParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAlaParaInspeccion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrBuzonesParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrBuzonesParaInspeccion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrCabinaParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrCabinaParaInspeccion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrFuselajeParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrFuselajeParaInspeccion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrHidraulicaParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrHidraulicaParaInspeccion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrAvionicaParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAvionicaParaInspeccion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTotalesTerminadosParaInspeccion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTotalesTerminadosParaInspeccion();
+    return $respuesta;
+  }
+
+  // MRBR POR INSTALACION
+  static public function ctrMrbrAlaParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAlaPorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrBuzonesParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrBuzonesPorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrCabinaParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrCabinaPorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrFuselajeParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrFuselajePorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrHidraulicaParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrHidraulicaPorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrAvionicaParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrAvionicaPorInstalacion();
+    return $respuesta;
+  }
+
+  static public function ctrMrbrTotalesTerminadosParaPorInstalacion()
+  {
+    $respuesta = ModeloInformeAvance::mdlCantidadMrbrTotalesTerminadosPorInstalacion();
+    return $respuesta;
+  }
 }
