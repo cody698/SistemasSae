@@ -39,6 +39,7 @@ class ControladorOrdenDeTrabajo {
     $documentosadjuntosentregadosOrdenes = $_POST["documentosadjuntosentregadosOrdenes"];
     $observacionesOrdenes = $_POST["observacionesOrdenes"];
     $caratulaOrdenes = $_POST["caratulaOrdenes"];
+    $piepaginaOrdenes = $_POST["piepaginaOrdenes"];
 
     $data = array(
       "ordendetrabajonumeroOrdenes"=>$_POST["ordendetrabajonumeroOrdenes"],
@@ -55,7 +56,8 @@ class ControladorOrdenDeTrabajo {
       "ordenesdetrabajosrelacionadasOrdenes"=>$_POST["ordenesdetrabajosrelacionadasOrdenes"],
       "documentosadjuntosentregadosOrdenes"=>$_POST["documentosadjuntosentregadosOrdenes"],
       "observacionesOrdenes"=>$_POST["observacionesOrdenes"],
-      "caratulaOrdenes"=>$_POST["caratulaOrdenes"]
+      "caratulaOrdenes"=>$_POST["caratulaOrdenes"],
+      "piepaginaOrdenes"=>$_POST["piepaginaOrdenes"]
     );
 
     $respuesta = ModeloOrdenDeTrabajo::mdlRegOrdenDeTrabajo( $data );
@@ -86,6 +88,7 @@ class ControladorOrdenDeTrabajo {
     $documentosadjuntosentregadosOrdenes = $_POST["documentosadjuntosentregadosOrdenes"];
     $observacionesOrdenes = $_POST["observacionesOrdenes"];
     $caratulaOrdenes = $_POST["caratulaOrdenes"];
+    $piepaginaOrdenes = $_POST["piepaginaOrdenes"];
     $data = array(
       "idOrdenTrabajo"=>$_POST["idOrdenTrabajo"],
       "ordendetrabajonumeroOrdenes"=>$_POST["ordendetrabajonumeroOrdenes"],
@@ -102,7 +105,8 @@ class ControladorOrdenDeTrabajo {
       "ordenesdetrabajosrelacionadasOrdenes"=>$_POST["ordenesdetrabajosrelacionadasOrdenes"],
       "documentosadjuntosentregadosOrdenes"=>$_POST["documentosadjuntosentregadosOrdenes"],
       "observacionesOrdenes"=>$_POST["observacionesOrdenes"],
-      "caratulaOrdenes"=>$_POST["caratulaOrdenes"]
+      "caratulaOrdenes"=>$_POST["caratulaOrdenes"],
+      "piepaginaOrdenes"=>$_POST["piepaginaOrdenes"]
     );
 
     $respuesta = ModeloOrdenDeTrabajo::mdlEditOrdenDeTrabajo( $data );

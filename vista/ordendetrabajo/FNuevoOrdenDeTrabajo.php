@@ -106,8 +106,14 @@
          <div class="row">
              <div class="col-sm-4">
                  <div class="form-group">
-                     <label for="">CARATULA ORDEN DE TRABAJO</label>
+                     <label for="">CARATULA ORDEN DE TRABAJO TITULO</label>
                      <input type="text" class="form-control" id="caratulaOrdenes" name="caratulaOrdenes" placeholder="CARATULA ORDEN DE TRABAJO">
+                 </div>
+             </div>
+             <div class="col-sm-4">
+                 <div class="form-group">
+                     <label for="">PIE DE PAGINA ORDEN DE TRABAJO CARATULA</label>
+                     <input type="text" class="form-control" id="piepaginaOrdenes" name="piepaginaOrdenes" placeholder="PIE DE PAGINA ORDEN DE TRABAJO CARATULA">
                  </div>
              </div>
          </div>

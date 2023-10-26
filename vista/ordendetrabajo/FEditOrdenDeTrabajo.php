@@ -121,6 +121,12 @@ $ordendetrabajo = ControladorOrdenDeTrabajo::ctrInfoOrdenDeTrabajo($id);
                     <input type="text" class="form-control" id="caratulaOrdenes" name="caratulaOrdenes" value="<?php echo $ordendetrabajo["titulocaratula_ordendetrabajo"]; ?>">
                 </div>
             </div>
+            <div class="col-sm-4">
+                 <div class="form-group">
+                     <label for="">PIE DE PAGINA ORDEN DE TRABAJO CARATULA</label>
+                     <input type="text" class="form-control" id="piepaginaOrdenes" name="piepaginaOrdenes" value="<?php echo $ordendetrabajo["piepaginacaratula_ordendetrabajo"]; ?>">
+                 </div>
+             </div>
         </div>
     </form>
 </div>

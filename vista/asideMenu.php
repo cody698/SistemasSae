@@ -59,7 +59,7 @@ function habilitado($idPermiso)
                         <!--fin Herramientas Salientes Entrantes-->
 
                          <!--inio Informe Reporte-->
-                         <?php if (habilitado(14) != null) {
+                         <?php if (habilitado(16) != null) {
                         ?>
                             <li class="nav-item dropdown dropdown-hover">
                                 <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Ordenes De Trabajo</a>
