@@ -47,16 +47,22 @@
              </div>
          </div>
          <div class="row">
-             <div class="col-sm-6">
+             <div class="col-sm-4">
                  <div class="form-group">
                      <label for="">SOLICITADA POR</label>
                      <input type="text" class="form-control" id="solicitadaporOrdenes" name="solicitadaporOrdenes" placeholder="SOLICITADA POR">
                  </div>
              </div>
-             <div class="col-sm-6">
+             <div class="col-sm-4">
                  <div class="form-group">
                      <label for="">NOMBRE AUTORIZADA</label>
                      <input type="text" class="form-control" id="nombreautorizadaorOrdenes" name="nombreautorizadaorOrdenes" placeholder="NOMBRE AUTORIZADA">
+                 </div>
+             </div>
+             <div class="col-sm-4">
+                 <div class="form-group">
+                     <label for="">FECHA ORDEN DE TRABAJO</label>
+                     <input type="date" class="form-control" id="fechaOrdenes" name="fechaOrdenes">
                  </div>
              </div>
          </div>

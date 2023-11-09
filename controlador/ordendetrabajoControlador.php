@@ -32,6 +32,7 @@ class ControladorOrdenDeTrabajo {
     $snOrdenes = $_POST["snOrdenes"];
     $solicitadaporOrdenes = $_POST["solicitadaporOrdenes"];
     $nombreautorizadaorOrdenes = $_POST["nombreautorizadaorOrdenes"];
+    $fechaOrdenes = $_POST["fechaOrdenes"];
     $documentosadjuntosrecibidosOrdenes = $_POST["documentosadjuntosrecibidosOrdenes"];
     $descripcionalcancetrabajoOrdenes = $_POST["descripcionalcancetrabajoOrdenes"];
     $descripciontrabajosOrdenes = $_POST["descripciontrabajosOrdenes"];
@@ -50,6 +51,7 @@ class ControladorOrdenDeTrabajo {
       "snOrdenes"=>$_POST["snOrdenes"],
       "solicitadaporOrdenes"=>$_POST["solicitadaporOrdenes"],
       "nombreautorizadaorOrdenes"=>$_POST["nombreautorizadaorOrdenes"],
+      "fechaOrdenes"=>$_POST["fechaOrdenes"],
       "documentosadjuntosrecibidosOrdenes"=>$_POST["documentosadjuntosrecibidosOrdenes"],
       "descripcionalcancetrabajoOrdenes"=>$_POST["descripcionalcancetrabajoOrdenes"],
       "descripciontrabajosOrdenes"=>$_POST["descripciontrabajosOrdenes"],
@@ -81,6 +83,7 @@ class ControladorOrdenDeTrabajo {
     $snOrdenes = $_POST["snOrdenes"];
     $solicitadaporOrdenes = $_POST["solicitadaporOrdenes"];
     $nombreautorizadaorOrdenes = $_POST["nombreautorizadaorOrdenes"];
+    $fechaOrdenes = $_POST["fechaOrdenes"];
     $documentosadjuntosrecibidosOrdenes = $_POST["documentosadjuntosrecibidosOrdenes"];
     $descripcionalcancetrabajoOrdenes = $_POST["descripcionalcancetrabajoOrdenes"];
     $descripciontrabajosOrdenes = $_POST["descripciontrabajosOrdenes"];
@@ -99,6 +102,7 @@ class ControladorOrdenDeTrabajo {
       "snOrdenes"=>$_POST["snOrdenes"],
       "solicitadaporOrdenes"=>$_POST["solicitadaporOrdenes"],
       "nombreautorizadaorOrdenes"=>$_POST["nombreautorizadaorOrdenes"],
+      "fechaOrdenes"=>$_POST["fechaOrdenes"],
       "documentosadjuntosrecibidosOrdenes"=>$_POST["documentosadjuntosrecibidosOrdenes"],
       "descripcionalcancetrabajoOrdenes"=>$_POST["descripcionalcancetrabajoOrdenes"],
       "descripciontrabajosOrdenes"=>$_POST["descripciontrabajosOrdenes"],

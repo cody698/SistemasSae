@@ -57,18 +57,24 @@ $ordendetrabajo = ControladorOrdenDeTrabajo::ctrInfoOrdenDeTrabajo($id);
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">SOLICITADA POR</label>
                     <input type="text" class="form-control" id="solicitadaporOrdenes" name="solicitadaporOrdenes" value="<?php echo $ordendetrabajo["solicitadapor_ordendetrabajo"]; ?>">
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">NOMBRE AUTORIZADA</label>
                     <input type="text" class="form-control" id="nombreautorizadaorOrdenes" name="nombreautorizadaorOrdenes" value="<?php echo $ordendetrabajo["nombreautorizado_ordendetrabajo"]; ?>">
                 </div>
             </div>
+            <div class="col-sm-4">
+                 <div class="form-group">
+                     <label for="">FECHA ORDEN DE TRABAJO</label>
+                     <input type="date" class="form-control" id="fechaOrdenes" name="fechaOrdenes" value="<?php echo $ordendetrabajo["fecha_ordendetrabajo"]; ?>">
+                 </div>
+             </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
