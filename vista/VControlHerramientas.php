@@ -19,7 +19,6 @@
       <form id="FormLogHerramientaSeleccionado" method="POST">
         <table id="DataTableControlHerramientas" class="table table-bordered table-striped">
           <thead>
-            <!-- <button class="btn btn-success" onclick="MCargarRegistrosControlHerramientas()">Importar Excel</button> -->
             <input type="button" class="btn btn-success mb-2" onclick="MCargarRegistrosControlHerramientas()" value="Importar Excel">
             <input type="button" class="btn btn-primary bg-dark ml-2 mr-2 mb-2" onclick="MDatosImpresion()" value="Imprimir Seleccionados">
             <input type="button" class="btn btn-primary bg-cyan ml-2 mr-2 mb-2" onclick="MMayorHerraCalibrada()" value="Seleccionar Tecnicos">

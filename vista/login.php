@@ -9,7 +9,7 @@
                               <img src="assest/imagenes/logo-sae-servicios-aeronauticos-especializados-300x172.png" style="width:150px;">
                           </div>
                           <div class="login-logo">
-                              <a href="CTramite"><b>SISTEMAS S.A.E.<b></a>
+                              <a href="CTramite"><b>SISTEMAS CONTROL S.A.E.<b></a>
                           </div>
                           <form action="" method="post">
                               <div class="input-group mb-3">
@@ -43,9 +43,6 @@
 
                           <p class="mb-1">
                               <a href="forgot-password.html">Recuperar Contraseña</a>
-                          </p>
-                          <p class="mb-0">
-                              <a href="register.html" class="text-center">Registrar nuevo miembro</a>
                           </p>
                       </div>
                       <!-- /.login-card-body -->
