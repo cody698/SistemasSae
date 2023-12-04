@@ -97,16 +97,34 @@ $pdf->SetFont('Helvetica', 'B', 8);
 $pdf->setX(10);
 $pdf->SetFillColor(61, 140, 205);
 $pdf->SetTextColor(255, 255, 255);
-$pdf->Cell(10, 8, 'ITEM', 1, 0, 'C', true);
+/* $pdf->Cell(12, 8, 'ITEM', 1, 0, 'C', true); */
+
 $pdf->Cell(42, 8, utf8_decode('DESCRIPCIÓN'), 1, 0, 'C', true);
-$pdf->Cell(17, 8, utf8_decode('P/N'), 1, 0, 'C', true);
-$pdf->Cell(17, 8, utf8_decode('SERIE'), 1, 0, 'C', true);
-$pdf->Cell(17, 8, utf8_decode('CODIGO'), 1, 0, 'C', true);
-$pdf->Cell(30, 8, utf8_decode('MARCA'), 1, 0, 'C', true);
-$pdf->Cell(11, 8, utf8_decode('CANT.'), 1, 0, 'C', true);
-$pdf->Cell(15, 8, utf8_decode('UNIDAD'), 1, 0, 'C', true);
+$pdf->Cell(14, 8, utf8_decode('P/N'), 1, 0, 'C', true);
+$pdf->Cell(14, 8, utf8_decode('S/N'), 1, 0, 'C', true);
+$pdf->Cell(14, 8, utf8_decode('CODIGO'), 1, 0, 'C', true);
+$pdf->Cell(35, 8, utf8_decode('MARCA o FABRICANTE'), 1, 0, 'C', true);
+$pdf->Cell(10, 8, utf8_decode('CANT.'), 1, 0, 'C', true);
+$pdf->Cell(25, 8, utf8_decode('UBICACION'), 1, 0, 'C', true);
 $pdf->Cell(20, 8, utf8_decode('FECH VENC.'), 1, 0, 'C', true);
-$pdf->Cell(18, 8, utf8_decode('FIRMA'), 1, 1, 'C', true);
+$pdf->Cell(23, 8, utf8_decode('FIRMA'), 1, 1, 'C', true);
+
+/* //==========================================================================
+$pdf->Cell(200, 10, '', 0, 1, 'L');
+//REPORTE ANTIGUO
+$pdf->SetTextColor(255, 255, 255);
+$pdf->SetFillColor(61, 140, 205);
+//$pdf->setY(200);
+$pdf->SetFont('Helvetica', 'B', 8);
+$pdf->setX(12);
+$pdf->Cell(10, 8, 'ITEM', 1, 0, 'C', true);
+$pdf->Cell(44, 8, utf8_decode('DESCRIPCIÓN'), 1, 0, 'C', true);
+$pdf->Cell(23, 8, utf8_decode('NRO DE PARTE'), 1, 0, 'C', true);
+$pdf->Cell(21, 8, utf8_decode('NRO DE SERIE'), 1, 0, 'C', true);
+$pdf->Cell(17, 8, utf8_decode('CÓDIGO'), 1, 0, 'C', true);
+$pdf->Cell(21, 8, utf8_decode('FECHA CAL.'), 1, 0, 'C', true);
+$pdf->Cell(20, 8, utf8_decode('FECHA VENC.'), 1, 0, 'C', true);
+$pdf->Cell(31, 8, utf8_decode('UBICACIÓN'), 1, 1, 'C', true); */
 
 $pdf->SetFont('Helvetica', 'B', 7);
 
@@ -124,14 +142,14 @@ foreach ($herramientaIndividual as $value) {
     $pdf->SetFont('Helvetica', '', 8);
     $pdf->SetTextColor(0, 0, 0);
     $pdf->setX(10);
-    $pdf->Cell(10, 8, utf8_decode($herra["id_controlherramientas"]), 1, 0);
+    /* $pdf->Cell(12, 8, utf8_decode($herra["id_controlherramientas"]), 1, 0); */
     $pdf->Cell(42, 8, limitar_cadena($herra["descripcion_controlherramientas"], 23, "...") , 1, 0);
-    $pdf->Cell(17, 8, $herra["pn_controlherramientas"], 1, 0, 'C');
-    $pdf->Cell(17, 8, $herra["numserie_controlherramientas"], 1, 0, 'C');
-    $pdf->Cell(17, 8, $herra["codigo_controlherramientas"], 1, 0, 'C');
-    $pdf->Cell(30, 8, $herra["marcaofabri_controlherramientas"], 1, 0, 'C');
-    $pdf->Cell(11, 8, $herra["cantidad_controlherramientas"], 1, 0, 'C');
-    $pdf->Cell(15, 8, $herra["unidad_controlherramientas"], 1, 0, 'C');
+    $pdf->Cell(14, 8, $herra["pn_controlherramientas"], 1, 0, 'C');
+    $pdf->Cell(14, 8, $herra["numserie_controlherramientas"], 1, 0, 'C');
+    $pdf->Cell(14, 8, $herra["codigo_controlherramientas"], 1, 0, 'C');
+    $pdf->Cell(35, 8, $herra["marcaofabri_controlherramientas"], 1, 0, 'C');
+    $pdf->Cell(10, 8, $herra["cantidad_controlherramientas"], 1, 0, 'C');
+    $pdf->Cell(25, 8, $herra["ubicacion_controlherramientas"], 1, 0, 'C');
   
   //fecha de caducidad - pintado
     date_default_timezone_set("America/La_Paz");
@@ -151,7 +169,7 @@ foreach ($herramientaIndividual as $value) {
     }
   
     
-    $pdf->Cell(18, 8, "", 1, 1, 'C');
+    $pdf->Cell(23, 8, "", 1, 1, 'C');
 }
 
 //CUADRO DE ASUNTO
