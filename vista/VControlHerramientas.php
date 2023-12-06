@@ -24,16 +24,16 @@
             <input type="button" class="btn btn-primary bg-cyan ml-2 mr-2 mb-2" onclick="MMayorHerraCalibrada()" value="Seleccionar Tecnicos">
             <tr>
               <th></th>
-              <th>ITEM</th>
+              <th style="width: 1%;">ITEM</th>
               <th>DESCRIPCION</th>
-              <!-- <th>P/N</th> -->
+              <th>P/N</th>
               <th>S/N</th>
               <th>CODIGO</th>
               <th>UBICACION</th>
-              <th>FECHA VENCIMIENTO</th>
-              <th>DIAS ALERTA</th>
-              <th>CANT.</th>
-              <th>N° CARPETA</th>
+              <th style="width: 5%;" class="text-center">FECHA VENCIMIENTO</th>
+              <th style="width: 5%;">DIAS ALERTA</th>
+              <th style="width: 5%;">CANT.</th>
+              <th style="width: 3%;">N° CARPETA</th>
               <td>
                 <!-- <button class="btn btn-primary" onclick="MNuevoControlHerramientas()">Agregar</button> -->
                 <input type="button" class="btn btn-primary" onclick="MNuevoControlHerramientas()" value="Agregar">
@@ -66,7 +66,7 @@
 
                 <td><?php echo $value["id_controlherramientas"]; ?></td>
                 <td><?php echo $value["descripcion_controlherramientas"]; ?></td>
-                <!-- <td><?php echo $value["pn_controlherramientas"]; ?></td> -->
+                <td><?php echo $value["pn_controlherramientas"]; ?></td>
                 <td><?php echo $value["numserie_controlherramientas"]; ?></td>
                 <td><?php echo $value["codigo_controlherramientas"]; ?></td>
                 <td><?php echo $value["ubicacion_controlherramientas"]; ?></td>

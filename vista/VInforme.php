@@ -18,13 +18,13 @@
             <table id="DataTableInforme" class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th>Fecha Informe</th>
-                        <th>Nro Informe</th>
-                        <th>De:</th>
-                        <th>A:</th>
-                        <th>Asunto</th>
-                        <th>Encargado</th>
-                        <th>Accíon</th>
+                        <th style="width: 10%;">Fecha Informe</th>
+                        <th style="width: 10%;">Nro Informe</th>
+                        <th style="width: 15%;">De:</th>
+                        <th style="width: 15%;">A:</th>
+                        <th style="width: 20%;">Asunto</th>
+                        <th style="width: 20%;">Encargado</th>
+                        <th style="width: 60%;">Accíon</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,7 +46,7 @@
                                 <button class="btn btn-secondary" onclick="MVerInforme(<?php echo $value['id_informe']; ?>)">
                                     <i class="fas fa-eye"></i>
                                 </button>
-                                <a class="btn btn-dark" href="vista/reportes/repHerramientaSelecSinFirma.php?id=<?php echo $value["id_informe"]; ?>" target="_blank"><i class="fas fa-print"></i></a>
+                                <a class="btn btn-primary" href="vista/reportes/repHerramientaSelecSinFirma.php?id=<?php echo $value["id_informe"]; ?>" target="_blank"><i class="fas fa-print"></i></a>
                                 <a class="btn btn-success" href="vista/reportes/repHerramientaSelec.php?id=<?php echo $value["id_informe"]; ?>" target="_blank"><i class="fas fa-print"></i></a>
                             </div>
                         </td>
