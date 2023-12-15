@@ -104,13 +104,13 @@ $ordendetrabajo = ControladorOrdenDeTrabajo::ctrInfoOrdenDeTrabajo($id);
             <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">DESCRIPCION DEL ALCANCE DEL TRABAJO</label>
-                    <textarea class="form-control" name="descripcionalcancetrabajoOrdenes" id="descripcionalcancetrabajoOrdenes" cols="30" rows="3" placeholder="DESCRIPCION DEL ALCANCE DEL TRABAJO SOLICITADO"><?php echo $ordendetrabajo["descripciondelalcancedeltrabajosolicitado_ordendetrabajo"]; ?></textarea>
+                    <textarea class="form-control" name="descripcionalcancetrabajoOrdenes" id="descripcionalcancetrabajoOrdenes" cols="30" rows="3"><?php echo $ordendetrabajo["descripciondelalcancedeltrabajosolicitado_ordendetrabajo"]; ?></textarea>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">DESCRIPCION DE TRABAJOS EFECTUADOS</label>
-                    <textarea class="form-control" name="descripciontrabajosOrdenes" id="descripciontrabajosOrdenes" cols="30" rows="3" placeholder="DESCRIPCION DE TRABAJOS EFECTUADOS"><?php echo $ordendetrabajo["descripciondetrabajosefectuados_ordendetrabajo"]; ?></textarea>
+                    <textarea class="form-control" name="descripciontrabajosOrdenes" id="descripciontrabajosOrdenes" cols="30" rows="3"><?php echo $ordendetrabajo["descripciondetrabajosefectuados_ordendetrabajo"]; ?></textarea>
                 </div>
             </div>
 
@@ -119,19 +119,19 @@ $ordendetrabajo = ControladorOrdenDeTrabajo::ctrInfoOrdenDeTrabajo($id);
             <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">ÓRDENES DE TRABAJO RELACIONADAS</label>
-                    <textarea class="form-control" name="ordenesdetrabajosrelacionadasOrdenes" id="ordenesdetrabajosrelacionadasOrdenes" cols="30" rows="3" placeholder="ÓRDENES DE TRABAJO RELACIONADAS"><?php echo $ordendetrabajo["ordenesdetrabajosrelacionadas_ordendetrabajo"]; ?></textarea>
+                    <textarea class="form-control" name="ordenesdetrabajosrelacionadasOrdenes" id="ordenesdetrabajosrelacionadasOrdenes" cols="30" rows="3"><?php echo $ordendetrabajo["ordenesdetrabajosrelacionadas_ordendetrabajo"]; ?></textarea>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">DOCUMENTOS ADJUNTOS ENTREGADOS</label>
-                    <textarea class="form-control" name="documentosadjuntosentregadosOrdenes" id="documentosadjuntosentregadosOrdenes" cols="30" rows="3" placeholder="DOCUMENTOS ADJUNTOS ENTREGADOS"><?php echo $ordendetrabajo["documentosadjuntosentregados_ordendetrabajo"]; ?></textarea>
+                    <textarea class="form-control" name="documentosadjuntosentregadosOrdenes" id="documentosadjuntosentregadosOrdenes" cols="30" rows="3"><?php echo $ordendetrabajo["documentosadjuntosentregados_ordendetrabajo"]; ?></textarea>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
                     <label for="">OBSERVACIONES</label>
-                    <textarea class="form-control" name="observacionesOrdenes" id="observacionesOrdenes" cols="30" rows="3" placeholder="OBSERVACIONES"><?php echo $ordendetrabajo["observaciones_ordendetrabajo"]; ?></textarea>
+                    <textarea class="form-control" name="observacionesOrdenes" id="observacionesOrdenes" cols="30" rows="3"><?php echo $ordendetrabajo["observaciones_ordendetrabajo"]; ?></textarea>
                 </div>
             </div>
         </div>

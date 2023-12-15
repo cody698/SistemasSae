@@ -65,6 +65,7 @@ function habilitado($idPermiso)
                                 <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Ordenes De Trabajo</a>
                                 <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
                                     <li><a href="VOrdenTrabajo" class="dropdown-item">Orden De Trabajo</a></li>
+                                    <li><a href="VRab" class="dropdown-item">Certificados RAB 001</a></li>
                                 </ul>
                             </li>
                         <?php } ?>

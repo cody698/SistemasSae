@@ -62,6 +62,7 @@ class ControladorHerramientas
     $marcafabriControlHerramientas = $_POST["marcafabriControlHerramientas"];
     $cantidadControlHerramientas = $_POST["cantidadControlHerramientas"];
     $unidadControlHerramientas = $_POST["unidadControlHerramientas"];
+    $obControlHerramientas = $_POST["obControlHerramientas"];
     $ubicacionControlHerramientas = $_POST["ubicacionControlHerramientas"];
     $fechacalControlHerramientas = $_POST["fechacalControlHerramientas"];
     $periodocalControlHerramientas = $_POST["periodocalControlHerramientas"];
@@ -87,6 +88,7 @@ class ControladorHerramientas
       "marcafabriControlHerramientas" => $_POST["marcafabriControlHerramientas"],
       "cantidadControlHerramientas" => $_POST["cantidadControlHerramientas"],
       "unidadControlHerramientas" => $_POST["unidadControlHerramientas"],
+      "obControlHerramientas" => $_POST["obControlHerramientas"],
       "ubicacionControlHerramientas" => $_POST["ubicacionControlHerramientas"],
       "fechacalControlHerramientas" => $_POST["fechacalControlHerramientas"],
       "periodocalControlHerramientas" => $_POST["periodocalControlHerramientas"],
@@ -127,6 +129,7 @@ class ControladorHerramientas
     $marcafabriControlHerramientas = $_POST["marcafabriControlHerramientas"];
     $cantidadControlHerramientas = $_POST["cantidadControlHerramientas"];
     $unidadControlHerramientas = $_POST["unidadControlHerramientas"];
+    $obControlHerramientas = $_POST["obControlHerramientas"];
     $ubicacionControlHerramientas = $_POST["ubicacionControlHerramientas"];
     $fechacalControlHerramientas = $_POST["fechacalControlHerramientas"];
     $periodocalControlHerramientas = $_POST["periodocalControlHerramientas"];
@@ -152,6 +155,7 @@ class ControladorHerramientas
       "marcafabriControlHerramientas" => $_POST["marcafabriControlHerramientas"],
       "cantidadControlHerramientas" => $_POST["cantidadControlHerramientas"],
       "unidadControlHerramientas" => $_POST["unidadControlHerramientas"],
+      "obControlHerramientas" => $_POST["obControlHerramientas"],
       "ubicacionControlHerramientas" => $_POST["ubicacionControlHerramientas"],
       "fechacalControlHerramientas" => $_POST["fechacalControlHerramientas"],
       "periodocalControlHerramientas" => $_POST["periodocalControlHerramientas"],

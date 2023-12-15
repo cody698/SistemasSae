@@ -71,6 +71,7 @@ if(isset($_SESSION["ingreso"])&&$_SESSION["ingreso"]=="ok"){
           $_GET["ruta"] == "VControlHerramientas" ||
           $_GET["ruta"] == "VCalibracion" ||
           $_GET["ruta"] == "VOrdenTrabajo" ||
+          $_GET["ruta"] == "VRab" ||
           $_GET["ruta"] == "VDBaja" ||
           $_GET["ruta"] == "BusTramite" ||
           $_GET["ruta"] == "VMarcaciones" ||

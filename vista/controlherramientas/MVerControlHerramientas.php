@@ -150,6 +150,11 @@ $controlherramientas = ControladorHerramientas::ctrInfoControlHerramienta($id);
                     <th>DOC. SALIDA</th>
                     <td><?php echo $controlherramientas["docsalida_controlherramientas"]; ?></td>
                 </tr>
+
+                <tr>
+                    <th>OBSERVACIONES</th>
+                    <td><?php echo $controlherramientas["observacion_controlherramientas"]; ?></td>
+                </tr>
             </table>
         </div>
     </div>

@@ -63,6 +63,12 @@
              </div>
              <div class="col-sm-2">
                  <div class="form-group">
+                     <label for="">OBSERVACIONES</label>
+                     <textarea class="form-control" name="obControlHerramientas" id="obControlHerramientas" cols="30" rows="3" placeholder="OBSERVACIONES"></textarea>
+                 </div>
+             </div>
+             <div class="col-sm-2">
+                 <div class="form-group">
                      <label for="">UBICACION</label>
                      <input type="text" class="form-control" id="ubicacionControlHerramientas" name="ubicacionControlHerramientas" placeholder="Ubicacion">
                  </div>
@@ -79,14 +85,14 @@
                      <input type="text" class="form-control" id="periodocalControlHerramientas" name="periodocalControlHerramientas" placeholder="Periodo de Cal. Meses" onkeyup="sumarMeses()" readonly>
                  </div>
              </div>
+         </div>
+         <div class="row">
              <div class="col-sm-2">
                  <div class="form-group">
                      <label for="">FECHA VENCIMIENTO</label>
                      <input type="date" class="form-control" id="fechavenciControlHerramientas" name="fechavenciControlHerramientas">
                  </div>
              </div>
-         </div>
-         <div class="row">
              <div class="col-sm-2">
                  <div class="form-group">
                      <label for="">ESTADO</label>
@@ -135,14 +141,14 @@
                      <input type="text" class="form-control" id="numcarpetaControlHerramientas" name="numcarpetaControlHerramientas" placeholder="N° Carpeta">
                  </div>
              </div>
+         </div>
+         <div class="row">
              <div class="col-sm-2">
                  <div class="form-group">
                      <label for="">N° CERT. LABORATORIO</label>
                      <input type="text" class="form-control" id="numcertiControlHerramientas" name="numcertiControlHerramientas" placeholder="N° Cert. Laboratorio">
                  </div>
              </div>
-         </div>
-         <div class="row">
              <div class="col-sm-2">
                  <div class="form-group">
                      <label for="">N° REG. LABORATORIO</label>
@@ -177,12 +183,8 @@
                      <input type="text" class="form-control" id="docsalidaControlHerramientas" name="docsalidaControlHerramientas" placeholder="Doc. Salida">
                  </div>
              </div>
-             <div class="col-sm-2">
-
-             </div>
          </div>
      </form>
-
  </div>
  <div class="modal-footer">
      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
