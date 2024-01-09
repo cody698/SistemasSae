@@ -230,6 +230,41 @@ function permiso($idPermiso)
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="form-group clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary17" <?php if (permiso(17) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,17)">
+                                                <label for="checkboxPrimary17">
+                                                    Bases Informe
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary18" <?php if (permiso(18) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,18)">
+                                                <label for="checkboxPrimary18">
+                                                    Base La Paz
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="form-group clearfix">
+                                            <div class="icheck-primary d-inline">
+                                                <input type="checkbox" id="checkboxPrimary19" <?php if (permiso(19) != NULL) : ?>checked<?php endif; ?> onChange="actualizarPermiso(<?php echo $id ?>,19)">
+                                                <label for="checkboxPrimary19">
+                                                    Base Santa Cruz
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

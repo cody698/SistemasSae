@@ -58,8 +58,8 @@ function habilitado($idPermiso)
                         <?php } ?>
                         <!--fin Herramientas Salientes Entrantes-->
 
-                         <!--inio Informe Reporte-->
-                         <?php if (habilitado(16) != null) {
+                        <!--inicio ordenes de trabajo-->
+                        <?php if (habilitado(16) != null) {
                         ?>
                             <li class="nav-item dropdown dropdown-hover">
                                 <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Ordenes De Trabajo</a>
@@ -69,7 +69,28 @@ function habilitado($idPermiso)
                                 </ul>
                             </li>
                         <?php } ?>
-                        <!--fin Informe Reporte-->
+                        <!--fin ordenes de trabajo-->
+
+
+                        <!--inicio ordenes de trabajo-->
+                        <?php if (habilitado(17) != null) {
+                        ?>
+                            <li class="nav-item dropdown dropdown-hover">
+                                <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Bases Informe</a>
+                                <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                                    <?php if (habilitado(18) != null) {
+                                    ?>
+                                        <li><a href="VBaseLpz" class="dropdown-item">Base La Paz</a></li>
+                                    <?php } ?>
+
+                                    <?php if (habilitado(19) != null) {
+                                    ?>
+                                    <li><a href="VBaseScz" class="dropdown-item">Base Santa Cruz</a></li>
+                                    <?php } ?>
+                                </ul>
+                            </li>
+                        <?php } ?>
+                        <!--fin ordenes de trabajo-->
 
                         <!--inicio Paquete Servicio-->
                         <?php if (habilitado(12) != null) {
@@ -155,16 +176,16 @@ function habilitado($idPermiso)
                             </a>
 
                             <!-- Sub Menu Imagen -->
-                            <ul class="dropdown-menu"> 
+                            <ul class="dropdown-menu">
                                 <li class="user-header">
                                     <img src="assest/dist/img/usuarios/<?php echo $_SESSION["imgUsuario"]; ?>" class="user-image" alt="User Image">
 
                                     <p>
-                                    <?php echo $_SESSION["nombreUsuario"]; ?>
+                                        <?php echo $_SESSION["nombreUsuario"]; ?>
                                         <small><?php echo $_SESSION["rol"]; ?></small>
                                     </p>
                                 </li>
-   
+
                                 <li class="user-footer">
                                     <div class="float-start">
                                         <a href="#" class="btn btn-default btn-flat">Perfil</a>

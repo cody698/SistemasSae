@@ -64,6 +64,8 @@
 <script src="assest/js/ordenesdetrabajo.js"></script>
 <script src="assest/js/informes.js"></script>
 <script src="assest/js/rab.js"></script>
+<script src="assest/js/baselpz.js"></script>
+<script src="assest/js/basescz.js"></script>
 <script src="assest/js/graficaopen.js"></script>
 <script src="assest/js/graficas/graficas.php"></script>
 <script src="assest/js/graficas/graficascpcp.php"></script>
@@ -302,6 +304,24 @@ Seccion  de Modals
             "autoWidth": false,
             "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
         }).buttons().container().appendTo('#DataTableRab_wrapper .col-md-6:eq(0)');
+    });
+
+    $(function() {
+        $("#DataTableBaseLpz").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#DataTableBaseLpz_wrapper .col-md-6:eq(0)');
+    });
+
+    $(function() {
+        $("#DataTableBaseScz").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#DataTableBaseScz_wrapper .col-md-6:eq(0)');
     });
 
     $(function() {
