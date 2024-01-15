@@ -14,8 +14,9 @@
                       <h3 class="m-0">Panel Base La Paz</h3>
                   </div>
                   <div class="card-body">
-                          <button class="btn btn-outline-primary ml-2 mr-2 mb-2" onclick="MNuevoBaseLpz()"><i class="fas fa-save"> Registrar</i></button>
-                          <button class="btn btn-outline-success ml-2 mr-2 mb-2" onclick="RepExcelLpz()"><i class="fas fa-file-excel"> Exportar Excel</i></button>
+                      <button class="btn btn-outline-primary ml-2 mr-2 mb-2" onclick="MNuevoBaseLpz()"><i class="fas fa-save"> Registrar</i></button>
+                      <button class="btn btn-outline-success ml-2 mr-2 mb-2" onclick="RepExcelLpz()"><i class="fas fa-file-excel"> Exportar Excel</i></button>
+                      <a class="btn btn-outline-info ml-2 mr-2 mb-2" href="vista/reportes/exportarbaselpz.php" target="_blank"><i class="fas fa-print">Exportar Todo</i></a>
                       <table id="DataTableBaseLpz" class="table table-bordered table-striped">
                           <thead>
 

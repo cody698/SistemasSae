@@ -16,6 +16,7 @@
                   <div class="card-body">
                       <button class="btn btn-outline-primary ml-2 mr-2 mb-2" onclick="MNuevoBaseScz()"><i class="fas fa-save"> Registrar</i></button>
                       <button class="btn btn-outline-success ml-2 mr-2 mb-2" onclick="RepExcelScz()"><i class="fas fa-file-excel"> Exportar Excel</i></button>
+                      <a class="btn btn-outline-info ml-2 mr-2 mb-2" href="vista/reportes/exportarbasescz.php" target="_blank"><i class="fas fa-print">Exportar Todo</i></a>
                       <table id="DataTableBaseScz" class="table table-bordered table-striped">
                           <thead>
                               <tr>
