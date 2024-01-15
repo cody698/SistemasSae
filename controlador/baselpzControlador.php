@@ -8,14 +8,14 @@ if ( isset( $ruta["query"] ) ) {
       $ruta["query"] == "ctrEliBaseLaPaz"
      ){
     $metodo = $ruta["query"];
-    $Baselapaz = new ControladorBaseLaPaz();
-    $Baselapaz->$metodo();
+    $BaseLaPaz = new ControladorBaseLaPaz();
+    $BaseLaPaz->$metodo();
   }
 }
 
 class ControladorBaseLaPaz {
 
-  static public function ctrInfoBasesLapaz() {
+  static public function ctrInfoBasesLaPaz() {
     $respuesta = ModeloBaseLaPaz::mdlInfoBasesLapaz();
     return $respuesta;
   }
@@ -32,6 +32,7 @@ class ControladorBaseLaPaz {
     $salidaxitineBaseLpz = $_POST["salidaxitineBaseLpz"];
     $salidarealBaseLpz = $_POST["salidarealBaseLpz"];
     $serealizoBaseLpz = $_POST["serealizoBaseLpz"];
+    $condBaseLpz = $_POST["condBaseLpz"];
     $diferidoBaseLpz = $_POST["diferidoBaseLpz"];
     $defectdesBaseLpz = $_POST["defectdesBaseLpz"];
     $actiontakenBaseLpz = $_POST["actiontakenBaseLpz"];
@@ -40,8 +41,12 @@ class ControladorBaseLaPaz {
     $otexploBaseLpz = $_POST["otexploBaseLpz"];
     $otsaeBaseLpz = $_POST["otsaeBaseLpz"];
     $notaBaseLpz = $_POST["notaBaseLpz"];
-    $aceitemotBaseLpz = $_POST["aceitemotBaseLpz"];
-    $hydBaseLpz = $_POST["hydBaseLpz"];
+    $aceitemot1BaseLpz = $_POST["aceitemot1BaseLpz"];
+    $aceitemot2BaseLpz = $_POST["aceitemot2BaseLpz"];
+    $aceitemotapuBaseLpz = $_POST["aceitemotapuBaseLpz"];
+    $hydyBaseLpz = $_POST["hydyBaseLpz"];
+    $hydgBaseLpz = $_POST["hydgBaseLpz"];
+    $hydbBaseLpz = $_POST["hydbBaseLpz"];
 
     $data = array(
       "fechvueloBaseLpz"=>$_POST["fechvueloBaseLpz"],
@@ -53,6 +58,7 @@ class ControladorBaseLaPaz {
       "salidaxitineBaseLpz"=>$_POST["salidaxitineBaseLpz"],
       "salidarealBaseLpz"=>$_POST["salidarealBaseLpz"],
       "serealizoBaseLpz"=>$_POST["serealizoBaseLpz"],
+      "condBaseLpz"=>$_POST["condBaseLpz"],
       "diferidoBaseLpz"=>$_POST["diferidoBaseLpz"],
       "defectdesBaseLpz"=>$_POST["defectdesBaseLpz"],
       "actiontakenBaseLpz"=>$_POST["actiontakenBaseLpz"],
@@ -61,8 +67,12 @@ class ControladorBaseLaPaz {
       "otexploBaseLpz"=>$_POST["otexploBaseLpz"],
       "otsaeBaseLpz"=>$_POST["otsaeBaseLpz"],
       "notaBaseLpz"=>$_POST["notaBaseLpz"],
-      "aceitemotBaseLpz"=>$_POST["aceitemotBaseLpz"],
-      "hydBaseLpz"=>$_POST["hydBaseLpz"]
+      "aceitemot1BaseLpz"=>$_POST["aceitemot1BaseLpz"],
+      "aceitemot2BaseLpz"=>$_POST["aceitemot2BaseLpz"],
+      "aceitemotapuBaseLpz"=>$_POST["aceitemotapuBaseLpz"],
+      "hydyBaseLpz"=>$_POST["hydyBaseLpz"],
+      "hydgBaseLpz"=>$_POST["hydgBaseLpz"],
+      "hydbBaseLpz"=>$_POST["hydbBaseLpz"]
     );
 
     $respuesta = ModeloBaseLaPaz::mdlRegBaseLaPaz( $data );
@@ -87,6 +97,7 @@ class ControladorBaseLaPaz {
     $salidaxitineBaseLpz = $_POST["salidaxitineBaseLpz"];
     $salidarealBaseLpz = $_POST["salidarealBaseLpz"];
     $serealizoBaseLpz = $_POST["serealizoBaseLpz"];
+    $condBaseLpz = $_POST["condBaseLpz"];
     $diferidoBaseLpz = $_POST["diferidoBaseLpz"];
     $defectdesBaseLpz = $_POST["defectdesBaseLpz"];
     $actiontakenBaseLpz = $_POST["actiontakenBaseLpz"];
@@ -95,8 +106,12 @@ class ControladorBaseLaPaz {
     $otexploBaseLpz = $_POST["otexploBaseLpz"];
     $otsaeBaseLpz = $_POST["otsaeBaseLpz"];
     $notaBaseLpz = $_POST["notaBaseLpz"];
-    $aceitemotBaseLpz = $_POST["aceitemotBaseLpz"];
-    $hydBaseLpz = $_POST["hydBaseLpz"];
+    $aceitemot1BaseLpz = $_POST["aceitemot1BaseLpz"];
+    $aceitemot2BaseLpz = $_POST["aceitemot2BaseLpz"];
+    $aceitemotapuBaseLpz = $_POST["aceitemotapuBaseLpz"];
+    $hydyBaseLpz = $_POST["hydyBaseLpz"];
+    $hydgBaseLpz = $_POST["hydgBaseLpz"];
+    $hydbBaseLpz = $_POST["hydbBaseLpz"];
     $data = array(
       "idBaseLpz"=>$_POST["idBaseLpz"],
       "fechvueloBaseLpz"=>$_POST["fechvueloBaseLpz"],
@@ -108,6 +123,7 @@ class ControladorBaseLaPaz {
       "salidaxitineBaseLpz"=>$_POST["salidaxitineBaseLpz"],
       "salidarealBaseLpz"=>$_POST["salidarealBaseLpz"],
       "serealizoBaseLpz"=>$_POST["serealizoBaseLpz"],
+      "condBaseLpz"=>$_POST["condBaseLpz"],
       "diferidoBaseLpz"=>$_POST["diferidoBaseLpz"],
       "defectdesBaseLpz"=>$_POST["defectdesBaseLpz"],
       "actiontakenBaseLpz"=>$_POST["actiontakenBaseLpz"],
@@ -116,8 +132,12 @@ class ControladorBaseLaPaz {
       "otexploBaseLpz"=>$_POST["otexploBaseLpz"],
       "otsaeBaseLpz"=>$_POST["otsaeBaseLpz"],
       "notaBaseLpz"=>$_POST["notaBaseLpz"],
-      "aceitemotBaseLpz"=>$_POST["aceitemotBaseLpz"],
-      "hydBaseLpz"=>$_POST["hydBaseLpz"]
+      "aceitemot1BaseLpz"=>$_POST["aceitemot1BaseLpz"],
+      "aceitemot2BaseLpz"=>$_POST["aceitemot2BaseLpz"],
+      "aceitemotapuBaseLpz"=>$_POST["aceitemotapuBaseLpz"],
+      "hydyBaseLpz"=>$_POST["hydyBaseLpz"],
+      "hydgBaseLpz"=>$_POST["hydgBaseLpz"],
+      "hydbBaseLpz"=>$_POST["hydbBaseLpz"]
     );
 
     $respuesta = ModeloBaseLaPaz::mdlEditBaseLaPaz( $data );
@@ -131,6 +151,11 @@ class ControladorBaseLaPaz {
     $respuesta = ModeloBaseLaPaz::mdlEliBaseLaPaz($data);
 
     echo $respuesta;
+  }
+
+  static public function ctrRepExcelBasesLapaz($columnas){
+    $respuesta = ModeloBaseLaPaz::mdlRepExcelBasesLapaz($columnas);
+    return $respuesta;
   }
   
 }

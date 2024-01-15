@@ -7,7 +7,7 @@ $id = $_GET["id"];
 $baselpz = ControladorBaseLaPaz::ctrInfoBaseLaPaz($id);
 $fecha;
 $fecha = $baselpz['fech_vuelo_baselpz'];
-$fecha= date("d/m/Y", strtotime($fecha));
+$fecha = date("d/m/Y", strtotime($fecha));
 
 ?>
 
@@ -48,7 +48,7 @@ $fecha= date("d/m/Y", strtotime($fecha));
                 </tr>
 
                 <tr>
-                    <th>SALIÓ A</th>
+                    <th>DESTINO</th>
                     <td><?php echo $baselpz["salio_a_baselpz"]; ?></td>
                 </tr>
 
@@ -68,18 +68,24 @@ $fecha= date("d/m/Y", strtotime($fecha));
                 </tr>
 
                 <tr>
+                    <th>CONDICIÓN</th>
+                    <td><?php echo $baselpz["condicion_baselpz"]; ?></td>
+                </tr>
+
+                <tr>
                     <th>DIFERÍDO</th>
                     <td><?php echo $baselpz["diferido_baselpz"]; ?></td>
                 </tr>
-            </table>
-        </div>
-        <div class="col-sm-6">
-            <table class="table">
 
                 <tr>
                     <th>DEFECT DESCRIPTION</th>
                     <td><?php echo $baselpz["defect_description_baselpz"]; ?></td>
                 </tr>
+
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <table class="table">
 
                 <tr>
                     <th>ACTION TAKEN</th>
@@ -112,13 +118,33 @@ $fecha= date("d/m/Y", strtotime($fecha));
                 </tr>
 
                 <tr>
-                    <th>ACEITE A LOS MOTORES</th>
-                    <td><?php echo $baselpz["aceite_a_los_motores_baselpz"]; ?></td>
+                    <th>ACEITE A LOS MOTORES(ENG#1)</th>
+                    <td><?php echo $baselpz["aceite_a_los_motores_1_baselpz"]; ?></td>
                 </tr>
 
                 <tr>
-                    <th>HYD</th>
-                    <td><?php echo $baselpz["hyd_baselpz"]; ?></td>
+                    <th>ACEITE A LOS MOTORES(ENG#2)</th>
+                    <td><?php echo $baselpz["aceite_a_los_motores_2_baselpz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>ACEITE A LOS MOTORES(APU)</th>
+                    <td><?php echo $baselpz["aceite_a_los_motores_apu_baselpz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>HYD(Y)</th>
+                    <td><?php echo $baselpz["hyd_y_baselpz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>HYD(G)</th>
+                    <td><?php echo $baselpz["hyd_g_baselpz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>HYD(B)</th>
+                    <td><?php echo $baselpz["hyd_b_baselpz"]; ?></td>
                 </tr>
 
             </table>

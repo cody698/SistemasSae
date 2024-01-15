@@ -7,7 +7,7 @@ $id = $_GET["id"];
 $basescz = ControladorBaseVVI::ctrInfoBaseVVI($id);
 $fecha;
 $fecha = $basescz['fech_vuelo_basescz'];
-$fecha= date("d/m/Y", strtotime($fecha));
+$fecha = date("d/m/Y", strtotime($fecha));
 
 ?>
 
@@ -48,7 +48,7 @@ $fecha= date("d/m/Y", strtotime($fecha));
                 </tr>
 
                 <tr>
-                    <th>SALIÓ A</th>
+                    <th>DESTINO</th>
                     <td><?php echo $basescz["salio_a_basescz"]; ?></td>
                 </tr>
 
@@ -68,18 +68,24 @@ $fecha= date("d/m/Y", strtotime($fecha));
                 </tr>
 
                 <tr>
+                    <th>CONDICIÓN</th>
+                    <td><?php echo $basescz["condicion_basescz"]; ?></td>
+                </tr>
+
+                <tr>
                     <th>DIFERÍDO</th>
                     <td><?php echo $basescz["diferido_basescz"]; ?></td>
                 </tr>
-            </table>
-        </div>
-        <div class="col-sm-6">
-            <table class="table">
 
                 <tr>
                     <th>DEFECT DESCRIPTION</th>
                     <td><?php echo $basescz["defect_description_basescz"]; ?></td>
                 </tr>
+
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <table class="table">
 
                 <tr>
                     <th>ACTION TAKEN</th>
@@ -112,13 +118,33 @@ $fecha= date("d/m/Y", strtotime($fecha));
                 </tr>
 
                 <tr>
-                    <th>ACEITE A LOS MOTORES</th>
-                    <td><?php echo $basescz["aceite_a_los_motores_basescz"]; ?></td>
+                    <th>ACEITE A LOS MOTORES(ENG#1)</th>
+                    <td><?php echo $basescz["aceite_a_los_motores_1_basescz"]; ?></td>
                 </tr>
 
                 <tr>
-                    <th>HYD</th>
-                    <td><?php echo $basescz["hyd_basescz"]; ?></td>
+                    <th>ACEITE A LOS MOTORES(ENG#2)</th>
+                    <td><?php echo $basescz["aceite_a_los_motores_2_basescz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>ACEITE A LOS MOTORES(APU)</th>
+                    <td><?php echo $basescz["aceite_a_los_motores_apu_basescz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>HYD(Y)</th>
+                    <td><?php echo $basescz["hyd_y_basescz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>HYD(G)</th>
+                    <td><?php echo $basescz["hyd_g_basescz"]; ?></td>
+                </tr>
+
+                <tr>
+                    <th>HYD(B)</th>
+                    <td><?php echo $basescz["hyd_b_basescz"]; ?></td>
                 </tr>
 
             </table>

@@ -25,6 +25,7 @@ class ModeloBaseVVI
     $salidaxitineBaseScz = $data["salidaxitineBaseScz"];
     $salidarealBaseScz = $data["salidarealBaseScz"];
     $serealizoBaseScz = $data["serealizoBaseScz"];
+    $condBaseScz = $data["condBaseScz"];
     $diferidoBaseScz = $data["diferidoBaseScz"];
     $defectdesBaseScz = $data["defectdesBaseScz"];
     $actiontakenBaseScz = $data["actiontakenBaseScz"];
@@ -33,10 +34,14 @@ class ModeloBaseVVI
     $otexploBaseScz = $data["otexploBaseScz"];
     $otsaeBaseScz = $data["otsaeBaseScz"];
     $notaBaseScz = $data["notaBaseScz"];
-    $aceitemotBaseScz = $data["aceitemotBaseScz"];
-    $hydBaseScz = $data["hydBaseScz"];
+    $aceitemot1BaseScz = $data["aceitemot1BaseScz"];
+    $aceitemot2BaseScz = $data["aceitemot2BaseScz"];
+    $aceitemotapuBaseScz = $data["aceitemotapuBaseScz"];
+    $hydyBaseScz = $data["hydyBaseScz"];
+    $hydgBaseScz = $data["hydgBaseScz"];
+    $hydbBaseScz = $data["hydbBaseScz"];
 
-    $stmt = Conexion::conectar()->prepare("insert into basescz(fech_vuelo_basescz, explotador_basescz, arribo_x_itine_basescz, arriba_real_basescz, puente_basescz, salio_a_basescz, salida_x_itine_basescz, salida_real_basescz, se_realizo_basescz, diferido_basescz, defect_description_basescz, action_taken_basescz, log_book_page_basescz, codigo_de_diferi_basescz, ot_explotador_basescz, ot_sae_basescz, nota_basescz, aceite_a_los_motores_basescz, hyd_basescz) values('$fechvueloBaseScz', '$explotadorBaseScz', '$arriboxitineBaseScz', '$arriborealBaseScz', '$puenteBaseScz', '$salioaBaseScz', '$salidaxitineBaseScz', '$salidarealBaseScz', '$serealizoBaseScz', '$diferidoBaseScz', '$defectdesBaseScz', '$actiontakenBaseScz', '$logbookBaseScz', '$coddiferidoBaseScz', '$otexploBaseScz', '$otsaeBaseScz', '$notaBaseScz', '$aceitemotBaseScz', '$hydBaseScz')");
+    $stmt = Conexion::conectar()->prepare("insert into basescz(fech_vuelo_basescz, explotador_basescz, arribo_x_itine_basescz, arriba_real_basescz, puente_basescz, salio_a_basescz, salida_x_itine_basescz, salida_real_basescz, se_realizo_basescz, condicion_basescz, diferido_basescz, defect_description_basescz, action_taken_basescz, log_book_page_basescz, codigo_de_diferi_basescz, ot_explotador_basescz, ot_sae_basescz, nota_basescz, aceite_a_los_motores_1_basescz, aceite_a_los_motores_2_basescz, aceite_a_los_motores_apu_basescz, hyd_y_basescz, hyd_g_basescz, hyd_b_basescz) values('$fechvueloBaseScz', '$explotadorBaseScz', '$arriboxitineBaseScz', '$arriborealBaseScz', '$puenteBaseScz', '$salioaBaseScz', '$salidaxitineBaseScz', '$salidarealBaseScz', '$serealizoBaseScz', '$condBaseScz', '$diferidoBaseScz', '$defectdesBaseScz', '$actiontakenBaseScz', '$logbookBaseScz', '$coddiferidoBaseScz', '$otexploBaseScz', '$otsaeBaseScz', '$notaBaseScz', '$aceitemot1BaseScz', '$aceitemot2BaseScz', '$aceitemotapuBaseScz', '$hydyBaseScz', '$hydgBaseScz', '$hydbBaseScz')");
 
     if ($stmt->execute()) {
       return "ok";
@@ -72,6 +77,7 @@ class ModeloBaseVVI
     $salidaxitineBaseScz = $data["salidaxitineBaseScz"];
     $salidarealBaseScz = $data["salidarealBaseScz"];
     $serealizoBaseScz = $data["serealizoBaseScz"];
+    $condBaseScz = $data["condBaseScz"];
     $diferidoBaseScz = $data["diferidoBaseScz"];
     $defectdesBaseScz = $data["defectdesBaseScz"];
     $actiontakenBaseScz = $data["actiontakenBaseScz"];
@@ -80,10 +86,14 @@ class ModeloBaseVVI
     $otexploBaseScz = $data["otexploBaseScz"];
     $otsaeBaseScz = $data["otsaeBaseScz"];
     $notaBaseScz = $data["notaBaseScz"];
-    $aceitemotBaseScz = $data["aceitemotBaseScz"];
-    $hydBaseScz = $data["hydBaseScz"];
+    $aceitemot1BaseScz = $data["aceitemot1BaseScz"];
+    $aceitemot2BaseScz = $data["aceitemot2BaseScz"];
+    $aceitemotapuBaseScz = $data["aceitemotapuBaseScz"];
+    $hydyBaseScz = $data["hydyBaseScz"];
+    $hydgBaseScz = $data["hydgBaseScz"];
+    $hydbBaseScz = $data["hydbBaseScz"];
 
-    $stmt = Conexion::conectar()->prepare("update basescz set fech_vuelo_basescz='$fechvueloBaseScz', explotador_basescz='$explotadorBaseScz',arribo_x_itine_basescz='$arriboxitineBaseScz', arriba_real_basescz='$arriborealBaseScz', puente_basescz='$puenteBaseScz', salio_a_basescz='$salioaBaseScz', salida_x_itine_basescz='$salidaxitineBaseScz', salida_real_basescz='$salidarealBaseScz', se_realizo_basescz='$serealizoBaseScz', diferido_basescz='$diferidoBaseScz', defect_description_basescz='$defectdesBaseScz', action_taken_basescz='$actiontakenBaseScz', log_book_page_basescz='$logbookBaseScz', codigo_de_diferi_basescz='$coddiferidoBaseScz', ot_explotador_basescz='$otexploBaseScz', ot_sae_basescz='$otsaeBaseScz', nota_basescz='$notaBaseScz', aceite_a_los_motores_basescz='$aceitemotBaseScz', hyd_basescz='$hydBaseScz' where id_basescz=$idBaseScz");
+    $stmt = Conexion::conectar()->prepare("update basescz set fech_vuelo_basescz='$fechvueloBaseScz', explotador_basescz='$explotadorBaseScz',arribo_x_itine_basescz='$arriboxitineBaseScz', arriba_real_basescz='$arriborealBaseScz', puente_basescz='$puenteBaseScz', salio_a_basescz='$salioaBaseScz', salida_x_itine_basescz='$salidaxitineBaseScz', salida_real_basescz='$salidarealBaseScz', se_realizo_basescz='$serealizoBaseScz', condicion_basescz='$condBaseScz', diferido_basescz='$diferidoBaseScz', defect_description_basescz='$defectdesBaseScz', action_taken_basescz='$actiontakenBaseScz', log_book_page_basescz='$logbookBaseScz', codigo_de_diferi_basescz='$coddiferidoBaseScz', ot_explotador_basescz='$otexploBaseScz', ot_sae_basescz='$otsaeBaseScz', nota_basescz='$notaBaseScz', aceite_a_los_motores_1_basescz='$aceitemot1BaseScz', aceite_a_los_motores_2_basescz='$aceitemot2BaseScz', aceite_a_los_motores_apu_basescz='$aceitemotapuBaseScz', hyd_y_basescz='$hydyBaseScz', hyd_g_basescz ='$hydgBaseScz', hyd_b_basescz ='$hydbBaseScz' where id_basescz=$idBaseScz");
 
     if ($stmt->execute()) {
 
@@ -109,4 +119,20 @@ class ModeloBaseVVI
     $stmt->close();
     $stmt->null;
   }
+
+  static public function mdlRepExcelBasesScz($columnas)
+  {
+    $stmt = Conexion::conectar()->prepare("SELECT $columnas FROM basescz");
+    $stmt->execute();
+
+
+    // Obtener los resultados
+    $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $resultados;
+
+    // Cerrar la conexión
+    $stmt->closeCursor();
+    $stmt->null;
+  }
+  
 }

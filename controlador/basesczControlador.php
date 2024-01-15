@@ -32,6 +32,7 @@ class ControladorBaseVVI {
     $salidaxitineBaseScz = $_POST["salidaxitineBaseScz"];
     $salidarealBaseScz = $_POST["salidarealBaseScz"];
     $serealizoBaseScz = $_POST["serealizoBaseScz"];
+    $condBaseScz = $_POST["condBaseScz"];
     $diferidoBaseScz = $_POST["diferidoBaseScz"];
     $defectdesBaseScz = $_POST["defectdesBaseScz"];
     $actiontakenBaseScz = $_POST["actiontakenBaseScz"];
@@ -40,8 +41,12 @@ class ControladorBaseVVI {
     $otexploBaseScz = $_POST["otexploBaseScz"];
     $otsaeBaseScz = $_POST["otsaeBaseScz"];
     $notaBaseScz = $_POST["notaBaseScz"];
-    $aceitemotBaseScz = $_POST["aceitemotBaseScz"];
-    $hydBaseScz = $_POST["hydBaseScz"];
+    $aceitemot1BaseScz = $_POST["aceitemot1BaseScz"];
+    $aceitemot2BaseScz = $_POST["aceitemot2BaseScz"];
+    $aceitemotapuBaseScz = $_POST["aceitemotapuBaseScz"];
+    $hydyBaseScz = $_POST["hydyBaseScz"];
+    $hydgBaseScz = $_POST["hydgBaseScz"];
+    $hydbBaseScz = $_POST["hydbBaseScz"];
 
     $data = array(
       "fechvueloBaseScz"=>$_POST["fechvueloBaseScz"],
@@ -53,6 +58,7 @@ class ControladorBaseVVI {
       "salidaxitineBaseScz"=>$_POST["salidaxitineBaseScz"],
       "salidarealBaseScz"=>$_POST["salidarealBaseScz"],
       "serealizoBaseScz"=>$_POST["serealizoBaseScz"],
+      "condBaseScz"=>$_POST["condBaseScz"],
       "diferidoBaseScz"=>$_POST["diferidoBaseScz"],
       "defectdesBaseScz"=>$_POST["defectdesBaseScz"],
       "actiontakenBaseScz"=>$_POST["actiontakenBaseScz"],
@@ -61,8 +67,12 @@ class ControladorBaseVVI {
       "otexploBaseScz"=>$_POST["otexploBaseScz"],
       "otsaeBaseScz"=>$_POST["otsaeBaseScz"],
       "notaBaseScz"=>$_POST["notaBaseScz"],
-      "aceitemotBaseScz"=>$_POST["aceitemotBaseScz"],
-      "hydBaseScz"=>$_POST["hydBaseScz"]
+      "aceitemot1BaseScz"=>$_POST["aceitemot1BaseScz"],
+      "aceitemot2BaseScz"=>$_POST["aceitemot2BaseScz"],
+      "aceitemotapuBaseScz"=>$_POST["aceitemotapuBaseScz"],
+      "hydyBaseScz"=>$_POST["hydyBaseScz"],
+      "hydgBaseScz"=>$_POST["hydgBaseScz"],
+      "hydbBaseScz"=>$_POST["hydbBaseScz"]
     );
 
     $respuesta = ModeloBaseVVI::mdlRegBaseVVI( $data );
@@ -87,6 +97,7 @@ class ControladorBaseVVI {
     $salidaxitineBaseScz = $_POST["salidaxitineBaseScz"];
     $salidarealBaseScz = $_POST["salidarealBaseScz"];
     $serealizoBaseScz = $_POST["serealizoBaseScz"];
+    $condBaseScz = $_POST["condBaseScz"];
     $diferidoBaseScz = $_POST["diferidoBaseScz"];
     $defectdesBaseScz = $_POST["defectdesBaseScz"];
     $actiontakenBaseScz = $_POST["actiontakenBaseScz"];
@@ -95,8 +106,12 @@ class ControladorBaseVVI {
     $otexploBaseScz = $_POST["otexploBaseScz"];
     $otsaeBaseScz = $_POST["otsaeBaseScz"];
     $notaBaseScz = $_POST["notaBaseScz"];
-    $aceitemotBaseScz = $_POST["aceitemotBaseScz"];
-    $hydBaseScz = $_POST["hydBaseScz"];
+    $aceitemot1BaseScz = $_POST["aceitemot1BaseScz"];
+    $aceitemot2BaseScz = $_POST["aceitemot2BaseScz"];
+    $aceitemotapuBaseScz = $_POST["aceitemotapuBaseScz"];
+    $hydyBaseScz = $_POST["hydyBaseScz"];
+    $hydgBaseScz = $_POST["hydgBaseScz"];
+    $hydbBaseScz = $_POST["hydbBaseScz"];
     $data = array(
       "idBaseScz"=>$_POST["idBaseScz"],
       "fechvueloBaseScz"=>$_POST["fechvueloBaseScz"],
@@ -108,6 +123,7 @@ class ControladorBaseVVI {
       "salidaxitineBaseScz"=>$_POST["salidaxitineBaseScz"],
       "salidarealBaseScz"=>$_POST["salidarealBaseScz"],
       "serealizoBaseScz"=>$_POST["serealizoBaseScz"],
+      "condBaseScz"=>$_POST["condBaseScz"],
       "diferidoBaseScz"=>$_POST["diferidoBaseScz"],
       "defectdesBaseScz"=>$_POST["defectdesBaseScz"],
       "actiontakenBaseScz"=>$_POST["actiontakenBaseScz"],
@@ -116,8 +132,12 @@ class ControladorBaseVVI {
       "otexploBaseScz"=>$_POST["otexploBaseScz"],
       "otsaeBaseScz"=>$_POST["otsaeBaseScz"],
       "notaBaseScz"=>$_POST["notaBaseScz"],
-      "aceitemotBaseScz"=>$_POST["aceitemotBaseScz"],
-      "hydBaseScz"=>$_POST["hydBaseScz"]
+      "aceitemot1BaseScz"=>$_POST["aceitemot1BaseScz"],
+      "aceitemot2BaseScz"=>$_POST["aceitemot2BaseScz"],
+      "aceitemotapuBaseScz"=>$_POST["aceitemotapuBaseScz"],
+      "hydyBaseScz"=>$_POST["hydyBaseScz"],
+      "hydgBaseScz"=>$_POST["hydgBaseScz"],
+      "hydbBaseScz"=>$_POST["hydbBaseScz"]
     );
 
     $respuesta = ModeloBaseVVI::mdlEditBaseVVI( $data );
@@ -131,6 +151,11 @@ class ControladorBaseVVI {
     $respuesta = ModeloBaseVVI::mdlEliBaseVVI($data);
 
     echo $respuesta;
+  }
+
+  static public function ctrRepExcelBasesScz($columnas){
+    $respuesta = ModeloBaseVVI::mdlRepExcelBasesScz($columnas);
+    return $respuesta;
   }
   
 }

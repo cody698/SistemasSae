@@ -381,6 +381,11 @@ Seccion  de Modals
     })
 </script>
 
+ <!-- jquery-validation -->
+ <script src="assest/plugins/jquery-validation/jquery.validate.min.js"></script>
+ <script src="assest/plugins/jquery-validation/additional-methods.min.js"></script>
+ <script src="assest/plugins/jquery-validation/localization/messages_es.js"></script>
+
 </body>
 
 </html>

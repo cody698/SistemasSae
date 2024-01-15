@@ -72,7 +72,7 @@ function habilitado($idPermiso)
                         <!--fin ordenes de trabajo-->
 
 
-                        <!--inicio ordenes de trabajo-->
+                        <!--inicio bases informes -->
                         <?php if (habilitado(17) != null) {
                         ?>
                             <li class="nav-item dropdown dropdown-hover">
@@ -90,7 +90,7 @@ function habilitado($idPermiso)
                                 </ul>
                             </li>
                         <?php } ?>
-                        <!--fin ordenes de trabajo-->
+                        <!--fin bases informes-->
 
                         <!--inicio Paquete Servicio-->
                         <?php if (habilitado(12) != null) {

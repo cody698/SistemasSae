@@ -16,7 +16,13 @@
              <div class="col-sm-3">
                  <div class="form-group">
                      <label for="">EXPLOTADOR</label>
-                     <textarea class="form-control" name="explotadorBaseScz" id="explotadorBaseScz" cols="30" rows="1" placeholder="EXPLOTADOR"></textarea>
+                     <select name="explotadorBaseScz" id="explotadorBaseScz" class="form-control">
+                         <option>SELECCIONE EL EXPLOTADOR</option>
+                         <option>LATAM</option>
+                         <option>AVIANCA</option>
+                         <option>AIR EUROPA</option>
+                         <option>AERCARIBE</option>
+                     </select>
                  </div>
              </div>
              <div class="col-sm-3">
@@ -41,8 +47,8 @@
              </div>
              <div class="col-sm-3">
                  <div class="form-group">
-                     <label for="">SALIÓ A</label>
-                     <input type="text" class="form-control" id="salioaBaseScz" name="salioaBaseScz" placeholder="SALIÓ A">
+                     <label for="">DESTINO</label>
+                     <input type="text" class="form-control" id="salioaBaseScz" name="salioaBaseScz" placeholder="DESTINO">
                  </div>
              </div>
              <div class="col-sm-3">
@@ -62,7 +68,13 @@
              <div class="col-sm-3">
                  <div class="form-group">
                      <label for="">SE REALIZÓ</label>
-                     <textarea class="form-control" name="serealizoBaseScz" id="serealizoBaseScz" cols="30" rows="1" placeholder="SE REALIZÓ"></textarea>
+                     <input type="text" class="form-control" id="serealizoBaseScz" name="serealizoBaseScz" placeholder="SE REALIZÓ">
+                 </div>
+             </div>
+             <div class="col-sm-3">
+                 <div class="form-group">
+                     <label for="">CONDICIÓN</label>
+                     <input type="text" class="form-control" id="condBaseScz" name="condBaseScz" placeholder="CONDICIÓN">
                  </div>
              </div>
              <div class="col-sm-3">
@@ -77,14 +89,14 @@
                      <input type="text" class="form-control" id="defectdesBaseScz" name="defectdesBaseScz" placeholder="DEFECT DESCRIPTION">
                  </div>
              </div>
+         </div>
+         <div class="row">
              <div class="col-sm-3">
                  <div class="form-group">
                      <label for="">ACTION TAKEN</label>
                      <input type="text" class="form-control" id="actiontakenBaseScz" name="actiontakenBaseScz" placeholder="ACTION TAKEN">
                  </div>
              </div>
-         </div>
-         <div class="row">
              <div class="col-sm-3">
                  <div class="form-group">
                      <label for="">LOG BOOK PAGE</label>
@@ -103,14 +115,14 @@
                      <input type="text" class="form-control" id="otexploBaseScz" name="otexploBaseScz" placeholder="OT EXPLOTADOR">
                  </div>
              </div>
+         </div>
+         <div class="row">
              <div class="col-sm-3">
                  <div class="form-group">
                      <label for="">OT SAE</label>
                      <input type="text" class="form-control" id="otsaeBaseScz" name="otsaeBaseScz" placeholder="OT SAE">
                  </div>
              </div>
-         </div>
-         <div class="row">
              <div class="col-sm-3">
                  <div class="form-group">
                      <label for="">NOTA</label>
@@ -119,14 +131,40 @@
              </div>
              <div class="col-sm-3">
                  <div class="form-group">
-                     <label for="">ACEITE A LOS MOTORES</label>
-                     <textarea class="form-control" name="aceitemotBaseScz" id="aceitemotBaseScz" cols="30" rows="1" placeholder="ACEITE A LOS MOTORES"></textarea>
+                     <label for="">ACEITE A LOS MOTORES(ENG#1)</label>
+                     <input type="text" class="form-control" id="aceitemot1BaseScz" name="aceitemot1BaseScz" placeholder="ACEITE A LOS MOTORES(ENG#1)">
                  </div>
              </div>
              <div class="col-sm-3">
                  <div class="form-group">
-                     <label for="">HYD</label>
-                     <textarea class="form-control" name="hydBaseScz" id="hydBaseScz" cols="30" rows="1" placeholder="HYD"></textarea>
+                     <label for="">ACEITE A LOS MOTORES(ENG#2)</label>
+                     <input type="text" class="form-control" id="aceitemot2BaseScz" name="aceitemot2BaseScz" placeholder="ACEITE A LOS MOTORES(ENG#2)">
+                 </div>
+             </div>
+         </div>
+         <div class="row">
+             <div class="col-sm-3">
+                 <div class="form-group">
+                     <label for="">ACEITE A LOS MOTORES(APU)</label>
+                     <input type="text" class="form-control" id="aceitemotapuBaseScz" name="aceitemotapuBaseScz" placeholder="ACEITE A LOS MOTORES(APU)">
+                 </div>
+             </div>
+             <div class="col-sm-3">
+                 <div class="form-group">
+                     <label for="">HYD(Y)</label>
+                     <input type="text" class="form-control" id="hydyBaseScz" name="hydyBaseScz" placeholder="HYD(Y)">
+                 </div>
+             </div>
+             <div class="col-sm-3">
+                 <div class="form-group">
+                     <label for="">HYD(G)</label>
+                     <input type="text" class="form-control" id="hydgBaseScz" name="hydgBaseScz" placeholder="HYD(G)">
+                 </div>
+             </div>
+             <div class="col-sm-3">
+                 <div class="form-group">
+                     <label for="">HYD(B)</label>
+                     <input type="text" class="form-control" id="hydbBaseScz" name="hydbBaseScz" placeholder="HYD(B)">
                  </div>
              </div>
          </div>
